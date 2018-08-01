@@ -1,0 +1,124 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+    background-color: rgba(246, 66, 66,1);
+    height:100vh;
+}
+/* HEADER */
+header {
+    color:white;
+}
+.title-header{
+    font-size: 2em;
+    text-align: center;
+}
+.box-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
+    margin: 2em auto;
+    justify-self: center;
+}
+.fa-bars {
+    font-size:3em;
+    position: fixed;
+    top: 0.5em;
+    left:0.5em;
+    color:white;
+}
+.box-lang-icon{
+    position: fixed;
+    top: 2em;
+    right:1em;
+    color:white;
+}
+.box-lang-icon span{
+    font-size:0.8em;
+    margin:0.1em;
+}
+#switch {
+    font-size:2em;
+}
+.button-icon{
+    color:white;
+    font-size: 2em;
+}
+
+/*MAIN-MENU*/
+
+.menu-main {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:90vw;
+    margin: auto;
+    flex-wrap: wrap;
+    
+   
+    
+}
+
+.button-menu--round h2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+     flex-wrap: wrap;
+    overflow: hidden; 
+    border: 8px solid rgba(255, 255, 255,0.7);
+    border-radius: 50%;
+     min-width: 7.5rem;
+     min-height: 7.5rem;
+    font-size: 1.3rem;
+    margin: 0.5em auto; 
+    color: rgba(255, 255, 255,0.7);
+    background-color: rgba(246, 66, 66,0.5);
+    filter: grayscale(30%);
+  
+    
+}
+.search-bar{
+    margin: 2em auto;
+}
+.search-bar input{
+    width: 80vw;
+    height: 2.5em;
+    margin: auto;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+}
+
+/*FOOTER*/
+.box-footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    margin: 4em auto;
+    justify-self: center;
+}  
+.fa-facebook-f{
+    color:rgba(255, 255, 255,0.7);
+    font-size: 2em;
+}
+
