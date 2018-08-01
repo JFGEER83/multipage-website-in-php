@@ -19,6 +19,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+.hide {
+    display:none;
+}
+
 body {
     color: white;
     background-color: rgba(246, 66, 66,1);
@@ -89,6 +93,18 @@ header {
     color: rgba(255, 255, 255,0.7);
     background-color: rgba(246, 66, 66,0.5);
     filter: grayscale(30%);
+}
+.section {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+    line-height: 2em;
+
+}
+.section h2 {
+    font-size: 2em;
+    text-align: center;
 }
 .search-bar{
     margin: 2em auto;

@@ -28,11 +28,20 @@
     left:0;
     transition: top 0.5s 1s, left 0.5s 0.5s, filter 0.5s 0.5s;
 }
-/* #button-infos.hide{ */
+/* #button-infos.transition{ */
 .button-menu--round.transition{
-    top:55vh;
-    left:22vw;
-    
+    top:/* 55vh; */80vh;
+    left:0vw; 
+}
+.section{
+    position: relative;
+    top:0;
+    left:0;
+    color:black;
+    transition: top 0.5s 3s;
+}
+.section.transition{
+    top:80vh;
 }
 .button-menu-round h2{
     background-color: rgba(246, 66, 66,0.5);
