@@ -1,0 +1,6 @@
+
+Au click d'un des boutons du menu:
+- Transition header hide 
+- Button transition header
+- section Appears 
+

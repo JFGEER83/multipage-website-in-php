@@ -1,0 +1,57 @@
+/*Animations slide menu*/
+
+.menu-main{
+    position: relative;
+    top:0;
+    left:0;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+}
+.menu-main.transition {
+    top: -100vh;
+  
+}
+#header-main{
+    position: relative;
+    top:0;
+    left:0;
+    transition: top 1s, color 1s;
+}
+#header-main.transition{
+    top:-50vh;
+    color:  rgba(246, 66, 66,1);
+}
+/* #button-infos{ */
+.button-menu--round{
+    position: relative;
+    top:0;
+    left:0;
+    transition: top 0.5s 1s, left 0.5s 0.5s, filter 0.5s 0.5s;
+}
+/* #button-infos.hide{ */
+.button-menu--round.transition{
+    top:55vh;
+    left:22vw;
+    
+}
+.button-menu-round h2{
+    background-color: rgba(246, 66, 66,0.5);
+    filter: grayscale(30%);
+    transition: background-color 1s 1s; 
+}
+.button-menu--round.transition h2{
+    background-color: rgba(246, 66, 66,1);
+}    
+
+body{
+    transition: background-color 2s ease-in, color 2s ease-in;
+}
+body.transition{
+    background-color: white;
+    color: rgba(246, 66, 66,1);
+}
+
+
+/* div {
+    transition: <property> <duration> <timing-function> <delay>;
+  } */
