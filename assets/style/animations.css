@@ -60,6 +60,17 @@
     color: rgba(246, 66, 66,1);
 }
 
+/*Animations slide menu-aside*/
+
+#section-aside {
+    position: fixed;
+    top: 40vh;
+    left:-250px;
+    transition: left 0.3s ease-in;
+}
+ #section-aside.transition{
+    left: 0px;
+}
 
 /* div {
     transition: <property> <duration> <timing-function> <delay>;

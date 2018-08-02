@@ -49,6 +49,7 @@ header {
     position: fixed;
     top: 0.5em;
     left:0.5em;
+    z-index:1000;
    
 }
 .box-lang-icon{
@@ -82,7 +83,7 @@ header {
     display:flex;
     justify-content: center;
     align-items: center;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
     overflow: hidden; 
     border: 8px solid rgba(255, 255, 255,0.7);
     border-radius: 50%;
@@ -102,9 +103,24 @@ header {
     line-height: 2em;
 
 }
-.section h2 {
+.section-title-primary {
     font-size: 2em;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 1em;
+
+}
+.section-title-secondary{
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 0.5em;
+
+padding-bottom: 2em;
+border-bottom: 2px solid rgba(246, 66, 66,0.8);
+border-radius: 0 0 50% 0;
+width: 70%;
+margin: 0.5em auto 2em auto;
 }
 .search-bar{
     margin: 2em auto;
@@ -131,4 +147,40 @@ header {
     color:rgba(255, 255, 255,0.7);
     font-size: 2em;
 }
+
+/*page_info - etapes importantes MENU*/
+
+ul {
+    list-style-type: none;
+}
+ul .fa-square{
+    margin-right: 0.5em;
+    color: rgba(246, 66, 66,0.8);
+}
+
+/*menu-ASIDE*/
+
+#section-aside{
+width: 60vw;
+max-width: 400px;
+background-color: rgba(255, 255, 255, 0.2);
+color: black;
+}
+#section-aside ul{
+    list-style-type: none;
+}
+#section-aside li{
+    margin: 0.5em;
+}
+#button-menu-asbl {
+    width: 50px;
+}
+.button{
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    color:rgba(246, 66, 66,0.8);
+}
+
+
 

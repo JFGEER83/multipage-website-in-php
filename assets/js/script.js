@@ -1,4 +1,9 @@
 /* Comportements suite au click sur les boutons du menu*/
+let buttonMenuAside = document.getElementById("button-menu-aside");
+let sectionAside = document.getElementById("section-aside");
+let menuAsbl= document.getElementById("menu-asbl");
+let sousMenuAside = document.querySelectorAll(".sous-menu-aside");
+let buttonMenuASBL =document.getElementById("button-menu-asbl");
 let bodyMain=document.getElementById("body-main");
 let menuMain= document.getElementById("menu-main");
 let headerMain= document.getElementById("header-main");
@@ -13,10 +18,17 @@ let sectionDoc= document.getElementById("section-doc");
 let sectionInfos= document.getElementById("section-infos");
 let sectionContact= document.getElementById("section-contact");
 let sectionSearch= document.getElementById("section-search");
+buttonMenuASBL.addEventListener("click",clickAsbl);
+buttonMenuAside.addEventListener("click",clickAside);
 buttonAbout.addEventListener("click",clickAbout);
 buttonInfos.addEventListener("click",clickInfos);
 buttonContact.addEventListener("click",clickContact);
 buttonDoc.addEventListener("click",clickDoc);
+
+function clickAside(){
+    sectionAside.classList.toggle("transition");
+    sousMenuAside.forEach(toggleHide);
+}
 function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
@@ -29,6 +41,9 @@ function addHide(item){
 function toggleTransition(item){
  
     item=item.classList.toggle("transition");
+}
+function clickAsbl(){
+    menuAsbl.classList.toggle("hide");
 }
 function clickButtons(){
     buttonsMenu.forEach(toggleHide);
@@ -70,6 +85,7 @@ function clickButtons(){
 function startPage(){
     section.forEach(toggleFlex);
     section.forEach(toggleHide);
+ /*    sectionAside.classList.toggle("transition"); */
     sectionSearch.classList.remove("d-flex");
     sectionSearch.classList.remove("hide");
 }

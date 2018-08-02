@@ -11,14 +11,18 @@
     <title>Document</title>
 </head>
 <body id="body-main">
-    <div>
-        <i class="fas fa-bars"></i>
-    </div>
+
+        <i id="button-menu-aside" class="fas fa-bars"></i>
+   
     <div class="box-lang-icon">
         <span>FR</span>       
         <span><i id="switch"class="fas fa-toggle-on"></i></span>
-        <span>EN</span>     
-        
+        <span>EN</span>      
+    </div>
+    <div id="section-aside" class="container-fluid">
+        <div class="row">
+            <?php include("menu.php");?>
+        </div>
     </div>
     <header id="header-main">
         <h1 class="title-header">ASSOC.BE</h1>
@@ -70,7 +74,7 @@
                         </div>
                         <div id="section-contact" class="container-fluid section d-flex">
                             <div class="row">
-                                <?php include("page_info.php");?>
+                                <?php include("page_contact.php");?>
                             </div>
                         </div>
                         <form id="section-search" class="section">

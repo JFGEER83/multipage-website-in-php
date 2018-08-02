@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <div class="col-12">
-    <h2>Les associations</h2>
+    <h2 class="section-title">A PROPOS</h2>
 </div>
 <div class="col-12 mx-auto">
     <small>Art. 27 de la Constitution Belge</small>   
