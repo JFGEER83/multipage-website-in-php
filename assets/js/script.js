@@ -12,6 +12,7 @@ let sectionAbout= document.getElementById("section-about");
 let sectionDoc= document.getElementById("section-doc");
 let sectionInfos= document.getElementById("section-infos");
 let sectionContact= document.getElementById("section-contact");
+let sectionSearch= document.getElementById("section-search");
 buttonAbout.addEventListener("click",clickAbout);
 buttonInfos.addEventListener("click",clickInfos);
 buttonContact.addEventListener("click",clickContact);
@@ -22,12 +23,18 @@ function toggleFlex(item){
 function toggleHide(item){
     item=item.classList.toggle("hide");
 }
+function addHide(item){
+    item=item.classList.add("hide");
+}
 function toggleTransition(item){
  
     item=item.classList.toggle("transition");
 }
 function clickButtons(){
     buttonsMenu.forEach(toggleHide);
+    sectionSearch.classList.toggle("hide");
+    /* section.forEach(toggleHide); */
+    /* section.forEach(toggleFlex); */
     menuMain.classList.toggle("transition");
     headerMain.classList.toggle("transition");
     bodyMain.classList.toggle("transition"); 
@@ -43,7 +50,9 @@ function clickButtons(){
  function clickContact(){
      clickButtons();
      buttonsMenu.forEach(toggleTransition);
+     section.forEach(toggleTransition);
      buttonContact.classList.toggle("hide");
+     sectionContact.classList.toggle("hide");
  }
  function clickDoc(){
     clickButtons();
@@ -52,12 +61,17 @@ function clickButtons(){
  }
  function clickAbout(){
     clickButtons();
+    sectionAbout.classList.toggle("hide");
     buttonsMenu.forEach(toggleTransition);
+    section.forEach(toggleTransition);
     buttonAbout.classList.toggle("hide");
+   
  }
 function startPage(){
     section.forEach(toggleFlex);
     section.forEach(toggleHide);
+    sectionSearch.classList.remove("d-flex");
+    sectionSearch.classList.remove("hide");
 }
 startPage();
 

@@ -43,9 +43,8 @@
                         </div>
                         <div id="section-about"class="container-fluid section d-flex">
                             <div class="row">
-                                <div class="col-10">
-                                    <h2>QUI SOMMES NOUS?</h2>
-                                </div>
+                                <?php include("page_aboutus.php");?>
+                        
                             </div>
                         </div>
                         <div id ="button-doc"class="button-menu--round"> 
@@ -53,9 +52,7 @@
                         </div>
                         <div id="section-doc" class="container-fluid section d-flex">
                             <div class="row">
-                                <div class="col-10">
-                                    <h2>Doc section</h2>
-                                </div>     
+                                <?php include("page_info.php");?>   
                             </div>
                         </div>
                             <div id="button-infos"class="button-menu--round">
@@ -64,38 +61,25 @@
                         
                         <div id="section-infos"class="container-fluid section d-flex ">
                             <div class="row">
-                                <div class="col-12">
-                                    <h2>Section Infos</h2>
-                                </div>
-                                <div class="col-12 mx-auto">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, corrupti.</p>
-                                </div>
+                                <?php include("page_info.php");?>
                             </div>
                         </div>
+                        
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
                         <div id="section-contact" class="container-fluid section d-flex">
                             <div class="row">
-                                <div class="col-10">
-                                    <h2>Section Contact</h2>
-                                </div>
+                                <?php include("page_info.php");?>
                             </div>
                         </div>
-                        <div class="search-bar">
-                            <input type="text" autofocus placeholder="SEARCH">
-                        </div>
+                        <form id="section-search" class="section">
+                            <div class="search-bar">
+                                <input type="text" name = "search" autofocus placeholder="SEARCH">
+                            </div>
+                        </form>
                 </div>
-            </div>
+        </div>
       <!--   </div> -->
     </main>
     <footer>

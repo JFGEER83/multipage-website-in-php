@@ -23,7 +23,7 @@ time, mark, audio, video {
     display:none;
 }
 
-body {
+#body-main {
     color: white;
     background-color: rgba(246, 66, 66,1);
     height:100vh;
