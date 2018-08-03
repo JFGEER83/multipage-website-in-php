@@ -70,9 +70,7 @@ function toggleTransition(item){
 function clickButtons(){
     buttonsMenu.forEach(toggleHide);
     sectionSearch.classList.toggle("hide");
-    /* section.forEach(toggleHide); */
-    /* section.forEach(toggleFlex); */
-    menuMain.classList.toggle("transition");
+              menuMain.classList.toggle("transition"); 
     headerMain.classList.toggle("transition");
     bodyMain.classList.toggle("transition"); 
 }
@@ -83,6 +81,7 @@ function clickButtons(){
      section.forEach(toggleTransition);
      buttonInfos.classList.toggle("hide");
      sectionInfos.classList.toggle("hide");
+     buttonInfos.classList.toggle("fixed");
  }
  function clickAside(){
     sectionAside.classList.toggle("transition");
@@ -117,19 +116,23 @@ function clickOutils(){
      section.forEach(toggleTransition);
      buttonContact.classList.toggle("hide");
      sectionContact.classList.toggle("hide");
+     buttonContact.classList.toggle("fixed");
  }
  function clickDoc(){
     clickButtons();
     buttonsMenu.forEach(toggleTransition);
+    section.forEach(toggleTransition);
     buttonDoc.classList.toggle("hide");
+    sectionDoc.classList.toggle("hide");
+    buttonDoc.classList.toggle("fixed");
  }
  function clickAbout(){
     clickButtons();
-    sectionAbout.classList.toggle("hide");
     buttonsMenu.forEach(toggleTransition);
     section.forEach(toggleTransition);
     buttonAbout.classList.toggle("hide");
-   
+    sectionAbout.classList.toggle("hide");
+    buttonAbout.classList.toggle("fixed");
  }
  /* let ancres=document.querySelectorAll('a[href^="#"]');
  ancres.forEach("click",scroll);

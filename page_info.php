@@ -1,6 +1,5 @@
  <!DOCTYPE html>
 <div class= "col-12">
-<a href="#ancre">ancre</a> 
 <h2 id="ancre-asbl"class="section-title-primary">LES ASBL</h2>
 </div>
 <div class="col-12 mx-auto">
@@ -15,7 +14,7 @@
     </p>
 </div>
 <div id="menu_la-loi" class="col-12 mx-auto">
-    <h3 class="section-title-secondary">La loi</h3>
+    <h3 id= "ancre-loi" class="section-title-secondary">La loi</h3>
     La loi qui régit les ASBL (Association Sans But Lucratif), est la loi du 27 juin 1921 qui a été modifiée par la loi du 2 mai 2002.
 
     <p>Plusieurs Arrêtés royaux et Arrêtés ministériels, disponibles sur le site Internet du SPF Justice, ont également été promulgués concernant la loi sur les ASBL.

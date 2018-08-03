@@ -1,6 +1,5 @@
 /*Animations slide menu*/
-
-.menu-main{
+/* .menu-main{
     position: relative;
     top:0;
     left:0;
@@ -10,6 +9,18 @@
 .menu-main.transition {
     top: -100vh;
   
+} */
+#menu-main{
+    position: relative;
+    top:0;
+    left:0;
+    -webkit-transition: top 0.3s;
+    transition: top 1s, color 1s;
+    
+}
+.menu-main.transition {
+    top: 0vh;
+    color: black; 
 }
 #header-main{
     position: relative;
@@ -21,19 +32,19 @@
     top:-50vh;
     color:  rgba(246, 66, 66,1);
 }
-/* #button-infos{ */
-.button-menu--round{
-    position: relative;
+
+ .button-menu--round{
+   /*  position: fixed; */
     top:0;
     left:0;
-    transition: top 0.3s 0.3s, left 0.3s 0.3s, filter 1s 0.5s;
+    z-index:1000;
+    transition: top 0.3s 0.3s, left 0.3s 0.3s;
 }
-/* #button-infos.transition{ */
 .button-menu--round.transition{
-    top:/* 55vh; */80vh;
-    left:0vw; 
+    top:0vh;
+    left:30vw;
 }
-.section{
+/* .section{
     position: relative;
     top:0;
     left:0;
@@ -41,8 +52,8 @@
     transition: top 0.5s 3s;
 }
 .section.transition{
-    top:80vh;
-}
+    top:0;
+} */
 .button-menu-round h2{
     background-color: rgba(246, 66, 66,0.5);
     filter: grayscale(30%);

@@ -22,6 +22,9 @@ time, mark, audio, video {
 .hide {
     display:none;
 }
+.fixed {
+    position: fixed;
+}
 
 #body-main {
     color: white;
@@ -194,6 +197,10 @@ ul .fa-square{
 .sous-menu-aside{
     background-color:rgba(246, 66, 66,0.1);;
     color: rgba(246, 66, 66,1);
+}
+.spacing h1 {
+    min-height: 20vh;
+    min-width: 50vw;
 }
 
 

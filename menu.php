@@ -2,9 +2,9 @@
     <button id="button-menu-asbl" class="button button-menu-aside">ASBL</button>
         <div id= "menu-asbl" class="sous-menu-aside">
             <ul>
-                <li>Présentation</li>
-                <li>La loi</li>
-                <li><button id="button-formalites">formalités</button></li> 
+                <li><a href="ancre-asbl">Présentation</a></li>
+                <li><a href="ancre-loi">La loi</a></li>
+                <li><a href="ancre-formalites">formalités</a></li> 
                 <li><a href="#ancre">Les status</a> </li>
                 <li>La gestion</li>
                 <li>Les membres</li>

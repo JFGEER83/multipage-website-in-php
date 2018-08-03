@@ -53,7 +53,7 @@
                         </div>
                         <div id="section-doc" class="container-fluid section d-flex">
                             <div class="row">
-                                <?php include("page_info.php");?>   
+                   
                             </div>
                         </div>
                             <div id="button-infos"class="button-menu--round">
@@ -88,9 +88,28 @@
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-facebook-f"></i>
         </div>
-    </footer>    
+    </footer>        
 <script src="assets/js/script.js"></script>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>     
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+    // au clic sur un lien
+    $('a').on('click', function(evt){
+       // bloquer le comportement par défaut: on ne rechargera pas la page
+       evt.preventDefault(); 
+       // enregistre la valeur de l'attribut  href dans la variable target
+	var target = $(this).attr('href');
+       /* le sélecteur $(html, body) permet de corriger un bug sur chrome 
+       et safari (webkit) */
+	$('html, body')
+       // on arrête toutes les animations en cours 
+       .stop()
+       /* on fait maintenant l'animation vers le haut (scrollTop) vers 
+        notre ancre target */
+       .animate({scrollTop: $(target).offset().top}, 1000 );
+    });
+});
+</script>
 </body>
 </html>
