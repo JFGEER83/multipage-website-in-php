@@ -1,4 +1,6 @@
 /* Comportements suite au click sur les boutons du menu*/
+let ancreFormalites = document.getElementById("ancre-formalites")
+/* let buttonFormalites= document.getElementById("button-formalites"); */
 let buttonMenuAside = document.getElementById("button-menu-aside");
 let sectionAside = document.getElementById("section-aside");
 let buttonMenusAside =document.getElementById("button-menu-aside");
@@ -27,6 +29,7 @@ let sectionDoc= document.getElementById("section-doc");
 let sectionInfos= document.getElementById("section-infos");
 let sectionContact= document.getElementById("section-contact");
 let sectionSearch= document.getElementById("section-search");
+/*buttonFormalites.addEventListener("click", clickFormalites);*/
 buttonMenuASBL.addEventListener("click",clickAsbl);
 buttonMenuAssocFaits.addEventListener("click",clickAssocFaits);
 buttonMenuChomage.addEventListener("click",clickChomage);
@@ -38,7 +41,9 @@ buttonInfos.addEventListener("click",clickInfos);
 buttonContact.addEventListener("click",clickContact);
 buttonDoc.addEventListener("click",clickDoc);
 
-
+/*function clickFormalites(){
+    ancreFormalites.scrollIntoView({behavior:"smooth"});
+}*/
 function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
@@ -48,6 +53,13 @@ function toggleHide(item){
 function addHide(item){
     item=item.classList.add("hide");
 }
+/* function addEventScroll(item){
+    item=item.addEventListener("click",functionScroll);
+}
+function functionScroll(item){
+    item=item.scrollIntoView({behavior: "smooth"});
+} */
+
 function removeHide(item){
     item=item.classList.remove("hide");
 }
@@ -74,7 +86,7 @@ function clickButtons(){
  }
  function clickAside(){
     sectionAside.classList.toggle("transition");
-     sousMenuAside.forEach(toggleHide);
+     sousMenuAside.forEach(addHide);
     /* buttonMenuAside.forEach(toggleHide);  */
 }
 function clickAsbl(){
@@ -119,6 +131,11 @@ function clickOutils(){
     buttonAbout.classList.toggle("hide");
    
  }
+ /* let ancres=document.querySelectorAll('a[href^="#"]');
+ ancres.forEach("click",scroll);
+ function scroll(item){
+    item=item.scrollIntoView({behavior: "smooth"});
+ } */
 function startPage(){
     buttonMenuAside.classList.add("hide");
     section.forEach(toggleFlex);
@@ -126,6 +143,15 @@ function startPage(){
     sectionSearch.classList.remove("d-flex");
     sectionSearch.classList.remove("hide");
 }
+/* document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+}); */
 startPage();
 
 

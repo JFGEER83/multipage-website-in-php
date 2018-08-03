@@ -18,7 +18,7 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline;
 }
-
+ 
 .hide {
     display:none;
 }
@@ -116,11 +116,22 @@ text-align: center;
 text-transform: uppercase;
 letter-spacing: 0.5em;
 
-padding-bottom: 2em;
+padding-bottom: 1.5em;
 border-bottom: 2px solid rgba(246, 66, 66,0.8);
-border-radius: 0 0 50% 0;
+border-radius: 0 0 30% 0;
 width: 70%;
 margin: 0.5em auto 2em auto;
+}
+.section-title-third{
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 0.2em;
+color: rgba(246, 66, 66,0.8);
+padding-bottom: 0.2em;
+border: 1px dotted rgba(246, 66, 66,0.8);
+width: 70%;
+margin: 0.5em auto 2em auto;
+font-size: 0.8em;
 }
 .search-bar{
     margin: 2em auto;

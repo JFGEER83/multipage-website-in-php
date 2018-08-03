@@ -4,8 +4,8 @@
             <ul>
                 <li>Présentation</li>
                 <li>La loi</li>
-                <li>Les formalités</li> 
-                <li>Les status</li>
+                <li><button id="button-formalites">formalités</button></li> 
+                <li><a href="#ancre">Les status</a> </li>
                 <li>La gestion</li>
                 <li>Les membres</li>
                 <li>Le personnel</li>

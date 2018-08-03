@@ -24,7 +24,7 @@
     </div>
     
     <header id="header-main">
-        <h1 class="title-header">ASSOC.BE</h1>
+        <h1 id="title-main"class="title-header">ASSOC.BE</h1>
         <div class="box-icons">
             <div class="button-icon">
                 <i class="fas fa-mobile-alt"></i>
@@ -39,7 +39,6 @@
     </header>
     <main>
         <div id="section-main">
-            <!-- <div class="container-fluid"> -->
                 <div  id= "menu-main" class="menu-main">
                         <div id="button-about"class="button-menu--round">
                             <h2>About Us</h2>
@@ -47,7 +46,6 @@
                         <div id="section-about"class="container-fluid section d-flex">
                             <div class="row">
                                 <?php include("page_aboutus.php");?>
-                        
                             </div>
                         </div>
                         <div id ="button-doc"class="button-menu--round"> 
@@ -67,13 +65,12 @@
                                 <?php include("page_info.php");?>
                             </div>
                         </div>
-                        
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
                         <div id="section-contact" class="container-fluid section d-flex">
                             <div class="row">
-                                <?php include("page_contact.php");?>
+                              <?php include("page_contact.php");?>
                             </div>
                         </div>
                         <form id="section-search" class="section">
@@ -83,10 +80,10 @@
                         </form>
                 </div>
         </div>
-      <!--   </div> -->
     </main>
     <footer>
         <div class="box-footer-icons">
+
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-facebook-f"></i>
