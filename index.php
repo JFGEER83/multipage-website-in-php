@@ -1,76 +1,84 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire PHP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Formulaire Assoc.be</title>
+
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        body {
+            padding-top: 5rem;
+        }
+
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
+    
 <body>
 
- <div class="container">
-         <form class="form-horizontal" action="cible.php" method="POST">
-             <div class="form-group">
-               <label class="col-sm-2" for="inputEmail4">Nom</label>
-             <div class="col-sm-10">
-               <input type="text" class="form-control" placeholder="Nom">
-             </div>
-               <label class="col-sm-2" for="inputEmail4">Prénom</label>
-               <div class="col-sm-10">
-               <input type="text" class="form-control" placeholder="Prénom">
-             </div>
-             </div>
-    <div class="form-group">
-       <label class="col-sm-2" for="exampleFormControlInput1">Email address</label>
-        <div class="col-sm-10">
-       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
+
+    <main role="main" class="container">
+<form>
+    <div class="form-group form-inline">
+       <label for="name" class="col-2">Nom</label>
+       <input type="text" id="name" class="form-control col-md-6">
     </div>
-    <div class="form-group">     
-  <label class="col-sm-4" for="custom-select">Vous désirez des informations sur :</label>
-    <div class="col-sm-10">
- <select class="custom-select">
-  <option selected>sélectioner votre préference</option>
-  <option value="1">ASBL</option>
-  <option value="2">Bénévolat</option>
-  <option value="3">Association de faits</option>
-</select> 
+    <div class="form-group form-inline">    
+        <label for="firstname" class="col-2">Prénom</label>
+       <input type="text" id="firstname" class="form-control col-md-6">
+    </div> 
+    <div class="form-group form-inline">
+       <label for="email" class="col-2">Email</label>
+       <input type="text" id="email" class="form-control col-md-6">
     </div>  
-    </div>        
-  <div class="form-group">
-    <label class="col-sm-2" for="exampleFormControlTextarea1">Message</label>
-      <div class="col-sm-10">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>      
-  </div>
-    <div class="form-gorup">       
-     <label class="col-sm-4">Format de réponse souhaitée :</label>
-    <div class="form-check form-check-inline">
-    <div class="col-sm-10">    
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        </div>    
-    <label class="form-check-label" for="inlineCheckbox1">Html</label>
+    <div class="form-group form-inline">  
+        <label class="col-2">Vous êtes</label>
+      <select class="custom-select">
+        <option selected>sélectioner votre préference</option>
+        <option value="1">ASBL</option>
+        <option value="2">Bénévolat</option>
+        <option value="3">Association de faits</option>
+       </select> 
     </div>
-    <div class="form-check form-check-inline">
-        <div class="col-sm-10">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        </div>
-    <label class="form-check-label" for="inlineCheckbox1">Txt</label>
+    <div class="form-group form-inline">
+       <label for="message" class="col-2">Votre message</label>
+       <textarea class="form-control col-md-6" id="message"></textarea>
+    </div>    
+    <label class="col-2">Format de réponse</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="html" value="option1">
+        <label class="form-check-label" for="html">.html</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="txt" value="option2">
+        <label class="form-check-label" for="txt">.txt</label>
+      </div>
+    <div>
+        <button type="submit" class="btn btn-light">Envoyer</button>
     </div>
-    </div>  
-    <div class="form-group row">
-    <div class="col-sm-9 text-right">
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-    </div>
-    </div>             
 </form>
-  </div>
-    
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>
-
-
