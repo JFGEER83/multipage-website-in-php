@@ -30,39 +30,39 @@
 
 
     <main role="main" class="container">
-<form>
+<form action="cible.php" method="post">
     <div class="form-group form-inline">
        <label for="name" class="col-2">Nom</label>
-       <input type="text" id="name" class="form-control col-md-6">
+       <input type="text" id="name" name="name" class="form-control col-md-6" placeholder="Nom de famille">
     </div>
     <div class="form-group form-inline">    
         <label for="firstname" class="col-2">Prénom</label>
-       <input type="text" id="firstname" class="form-control col-md-6">
+       <input type="text" id="firstname" name="firstname" class="form-control col-md-6" placeholder="Prénom">
     </div> 
     <div class="form-group form-inline">
        <label for="email" class="col-2">Email</label>
-       <input type="text" id="email" class="form-control col-md-6">
+       <input type="mail" id="email" name="email" class="form-control col-md-6" placeholder="email@mail.me">
     </div>  
     <div class="form-group form-inline">  
-        <label class="col-2">Vous êtes</label>
-      <select class="custom-select">
+        <label for"choix" class="col-2">Vous êtes</label>
+      <select name="choix" id="choix" class="custom-select">
         <option selected>sélectioner votre préference</option>
-        <option value="1">ASBL</option>
-        <option value="2">Bénévolat</option>
-        <option value="3">Association de faits</option>
+        <option value="ASBL">ASBL</option>
+        <option value="Bénévolat">Bénévolat</option>
+        <option value="Association de faits">Association de faits</option>
        </select> 
     </div>
     <div class="form-group form-inline">
        <label for="message" class="col-2">Votre message</label>
-       <textarea class="form-control col-md-6" id="message"></textarea>
+       <textarea name="message" class="form-control col-md-6" id="message" placeholder="Tapez votre message ici"></textarea>
     </div>    
-    <label class="col-2">Format de réponse</label>
+    <label for="check" class="col-2">Format de réponse</label>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="html" value="option1">
+        <input class="form-check-input" type="radio" name="check" id="html" value=".html">
         <label class="form-check-label" for="html">.html</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="txt" value="option2">
+        <input class="form-check-input" type="radio" name="check" id="txt" value=".txt">
         <label class="form-check-label" for="txt">.txt</label>
       </div>
     <div>
