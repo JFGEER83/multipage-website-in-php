@@ -68,9 +68,9 @@
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
-                        <div id="section-contact" class="container-fluid section d-flex">
-                            <div class="row">
-                              <?php include("page_contact.php");?>
+                        <div id="section-contact" class="container section d-flex">
+                           <div class="row">
+                              <?php include("page_contact.php");?> 
                             </div>
                         </div>
                         <form id="section-search" class="section">
@@ -90,6 +90,7 @@
         </div>
     </footer>        
 <script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script>

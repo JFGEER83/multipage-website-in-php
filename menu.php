@@ -2,19 +2,19 @@
     <button id="button-menu-asbl" class="button button-menu-aside">ASBL</button>
         <div id= "menu-asbl" class="sous-menu-aside">
             <ul>
-                <li><a href="ancre-asbl">Présentation</a></li>
-                <li><a href="ancre-loi">La loi</a></li>
-                <li><a href="ancre-formalites">formalités</a></li> 
-                <li><a href="#ancre">Les status</a> </li>
-                <li>La gestion</li>
-                <li>Les membres</li>
-                <li>Le personnel</li>
-                <li>Les formations</li>
-                <li>La dissolution</li>
-                <li>Liens</li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-asbl">Présentation</a></button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-loi">La loi</a></button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-formalites">formalités</a></button> </li> 
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-status">Les status</a></button>  </li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-gestion">La gestion</a></button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-membres">Les membres</a></button>  </li>
+                <li><button class="button button-sousmenu-aside">Le personnel</button> </li>
+                <li><button class="button button-sousmenu-aside">Les formations</button> </li>
+                <li><button class="button button-sousmenu-aside">La dissolution</button> </li>
+                <li><button class="button button-sousmenu-aside">Liens</button> </li>
             </ul>
         </div>
-    <button id="button-menu-assoc-faits" class="button button-menu-aside"><a href="#ancre-assoc"></a> Associations de faits</button>
+    <button id="button-menu-assoc-faits" class="button button-menu-aside"><a href="#ancre-assoc"></a>Associations de faits</button>
         <div id="menu-assoc-faits" class="sous-menu-aside"> 
             <ul>
                 <li>Presentations</li>

@@ -54,15 +54,15 @@
 .section.transition{
     top:0;
 } */
-.button-menu-round h2{
+  .button-menu-round h2{
     background-color: rgba(246, 66, 66,0.5);
-    filter: grayscale(30%);
-    transition: background-color 1s 1s; 
+     filter: grayscale(30%);
+    transition: background-color 1s; 
 }
 .button-menu--round.transition h2{
     background-color: rgba(246, 66, 66,1);
-}    
-
+}     
+ 
 #body-main{
     transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
