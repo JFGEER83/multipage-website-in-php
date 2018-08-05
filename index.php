@@ -12,7 +12,7 @@
 </head>
 <body id="body-main">
 
-    <i id="button-menu-aside" class="fas fa-bars"></i>
+    <i id="button-menu" class="fas fa-bars"></i>
     <div id="section-aside">
             <?php include("menu.php");?>
     </div>

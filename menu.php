@@ -1,4 +1,4 @@
-
+<i id="button-menu-aside"class="fas fa-arrow-circle-right"></i>
     <button id="button-menu-asbl" class="button button-menu-aside">ASBL</button>
         <div id= "menu-asbl" class="sous-menu-aside">
             <ul>

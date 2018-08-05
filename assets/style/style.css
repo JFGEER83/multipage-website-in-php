@@ -26,6 +26,13 @@ time, mark, audio, video {
     position: fixed;
 }
 
+/* .absolute{
+    position: absolute;
+}
+.relative {
+    position: relative;
+} */
+
 #body-main {
     color: white;
     background-color: rgba(246, 66, 66,1);
@@ -77,11 +84,14 @@ header {
                 /*MENU*/
 .menu-main {
     display:flex;
+    position: relative;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     width:90vw;
-    margin: auto;
-    flex-wrap: wrap;   
+    margin: 0 auto;
+    flex-wrap: wrap;
+    transition: left 1s;
+    left:0vw;   
 }
 .button-menu--round h2{
     display:flex;
@@ -98,20 +108,21 @@ header {
     color: rgba(255, 255, 255,0.7);
     background-color: rgba(246, 66, 66,0.5);
     filter: grayscale(30%);
+/*     position :relative; */
+    top: 70px;
+    left: 40vw;
+    /* transition:background-color 2s min-width 2s, min-height 2s, border-width 2s, font-size 2s; */
 }
-.button-menu--round h2:hover{
-    color: rgba(246, 66, 66,0.8);
-    background-color: rgba(255, 255, 255,1);
-    font-weight: 700;
-    cursor: pointer;
-   
-}
+#button-infos h2{
+     transition:top 0.3s ease-in, left 0.3s ease-in, background-color 1s, min-width 0.8s, min-height 0.8s, border-width 0.3s, font-size 0.3s;
+
+} 
 #button-infos h2:hover{
     color: rgba(246, 66, 66,0.8);
     background-color: rgba(255, 255, 255,1);
     font-weight: 700;
     cursor: pointer;
-}
+} 
 .section {
     justify-content: center;
     align-items: center;
@@ -201,7 +212,22 @@ ul .fa-square{
     background-color: rgba(255, 255, 255, 0.9);
     color: black;
     z-index:1000;
+    position: fixed;
+    top: 140px;
+    left:-100px;
+    transition: left 0.3s ease-in;
     
+}
+#button-menu-aside{
+    position: relative;
+    
+    left: 20px;
+    color:rgba(246, 66, 66,0.8);
+    background-color:  white;
+    text-align: end;
+   /* transform: rotate(0deg);
+     transition: transform 1s; */
+     z-index: 800; 
 }
 /* #section-aside ul{
     list-style-type: none;

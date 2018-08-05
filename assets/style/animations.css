@@ -1,26 +1,20 @@
 /*Animations slide menu*/
-/* .menu-main{
-    position: relative;
-    top:0;
-    left:0;
-    -webkit-transition: top 0.3s;
-    transition: top 0.3s;
-}
-.menu-main.transition {
-    top: -100vh;
-  
-} */
-#menu-main{
-    position: relative;
-    top:0;
-    left:0;
-    -webkit-transition: top 0.3s;
-    transition: top 1s, color 1s;
-    
-}
-.menu-main.transition {
+ .menu-main.transition {
+    position: absolute;
     top: 0vh;
-    color: black; 
+    color: black;
+    animation-name: transition;
+    animation-duration: 0.3s;
+    animation-iteration-count:1;
+    animation-delay:0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;  
+}  
+
+@-webkit-keyframes transition {
+    0% {left: -100vw;}
+    100%{left:0vw}
 }
 #header-main{
     position: relative;
@@ -33,35 +27,40 @@
     color:  rgba(246, 66, 66,1);
 }
 
- .button-menu--round{
-   /*  position: fixed; */
+/*  .button-menu--round{
     top:0;
     left:0;
     z-index:1000;
     transition: top 0.3s 0.3s, left 0.3s 0.3s;
-}
-.button-menu--round.transition{
+} */
+/* .button-menu--round.transition{
     top:0vh;
     left:30vw;
-}
-/* .section{
-    position: relative;
-    top:0;
-    left:0;
-    color:black;
-    transition: top 0.5s 3s;
-}
-.section.transition{
-    top:0;
 } */
-  .button-menu-round h2{
-    background-color: rgba(246, 66, 66,0.5);
-     filter: grayscale(30%);
-    transition: background-color 1s; 
+ #button-menu-aside.transition:after{
+    transform: rotate(180deg);
+} 
+#button-infos.sticky h2{
+    position: fixed;
+    top:70px;
+    left:15px;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+    border-width : 2px;
+    font-size : 1rem;
+    z-index:1000;
 }
 .button-menu--round.transition h2{
     background-color: rgba(246, 66, 66,1);
-}     
+
+}   
+
+.button-menu--round.relative h2{
+    position: relative;
+    top:0;
+    left:0;
+}
+  
  
 #body-main{
     transition: background-color 0.5s ease-in, color 0.5s ease-in;
@@ -73,14 +72,8 @@
 
 /*Animations slide menu-aside*/
 
-#section-aside {
-    position: fixed;
-    top: 90px;
-    left:-250px;
-    transition: left 0.3s ease-in;
-}
  #section-aside.transition{
-    left: 0px;
+    left: 0;
 }
 
 /* div {

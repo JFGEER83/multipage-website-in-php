@@ -1,9 +1,9 @@
 /* Comportements suite au click sur les boutons du menu*/
 let ancreFormalites = document.getElementById("ancre-formalites")
 /* let buttonFormalites= document.getElementById("button-formalites"); */
-let buttonMenuAside = document.getElementById("button-menu-aside");
+let buttonMenu = document.getElementById("button-menu");
 let sectionAside = document.getElementById("section-aside");
-let buttonMenusAside =document.getElementById("button-menu-aside");
+let buttonArrow =document.getElementById("button-menu-aside");
 let menuAsbl= document.getElementById("menu-asbl");
 let menuAssocFaits= document.getElementById("menu-assoc-faits");
 let menuChomage= document.getElementById("menu-chomage");
@@ -35,7 +35,8 @@ buttonMenuAssocFaits.addEventListener("click",clickAssocFaits);
 buttonMenuChomage.addEventListener("click",clickChomage);
 buttonMenuFinancement.addEventListener("click",clickFinancement);
 buttonMenuOutils.addEventListener("click", clickOutils);
-buttonMenuAside.addEventListener("click",clickAside);
+buttonArrow.addEventListener("mouseover",clickAside);
+sectionAside.addEventListener("mouseleave",clickAside);
 buttonAbout.addEventListener("click",clickAbout);
 buttonInfos.addEventListener("click",clickInfos);
 buttonContact.addEventListener("click",clickContact);
@@ -44,6 +45,19 @@ buttonDoc.addEventListener("click",clickDoc);
 /*function clickFormalites(){
     ancreFormalites.scrollIntoView({behavior:"smooth"});
 }*/
+window.onscroll = function() {myFunction()};
+
+/* var header = document.getElementById("myHeader"); */
+var sticky = buttonInfos.offsetTop;
+
+function myFunction() {
+   
+  if (window.pageYOffset > 140) {
+    buttonInfos.classList.add("sticky");
+  }else{
+      buttonInfos.classList.remove("sticky");
+  }
+}
 function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
@@ -70,45 +84,49 @@ function toggleTransition(item){
 function clickButtons(){
     buttonsMenu.forEach(toggleHide);
     sectionSearch.classList.toggle("hide");
-              menuMain.classList.toggle("transition"); 
+    menuMain.classList.toggle("transition"); 
     headerMain.classList.toggle("transition");
     bodyMain.classList.toggle("transition"); 
 }
  function clickInfos(){
+    console.log(buttonInfos.offsetTop);
      clickButtons();
-     buttonMenusAside.classList.toggle("hide");
+     buttonArrow.classList.toggle("hide");
+     buttonMenu.classList.toggle("hide");
      buttonsMenu.forEach(toggleTransition);
      section.forEach(toggleTransition);
      buttonInfos.classList.toggle("hide");
      sectionInfos.classList.toggle("hide");
-     buttonInfos.classList.toggle("fixed");
+     /*   buttonInfos.classList.toggle("relative"); */
+     /* buttonInfos.classList.toggle("sticky"); */
  }
  function clickAside(){
     sectionAside.classList.toggle("transition");
-     sousMenuAside.forEach(addHide);
-    /* buttonMenuAside.forEach(toggleHide);  */
+    sousMenuAside.forEach(addHide);
+    
+    /* buttonMenu.forEach(toggleHide);  */
 }
 function clickAsbl(){
-   /*  buttonMenuAside.forEach(addHide); */
+   /*  buttonMenu.forEach(addHide); */
     menuAsbl.classList.toggle("hide");
-     /* buttonMenuAside.forEach(toggleHide);
+     /* buttonMenu.forEach(toggleHide);
      buttonMenuASBL.classList.toggle("hide"); */
 }
 function clickAssocFaits(){
     menuAssocFaits.classList.toggle("hide");
-    /* buttonMenuAside.forEach(toggleHide); */
+    /* buttonMenu.forEach(toggleHide); */
 }
 function clickChomage(){
      menuChomage.classList.toggle("hide");
-    /*  buttonMenuAside.forEach(toggleHide);    */
+    /*  buttonMenu.forEach(toggleHide);    */
     }
 function clickFinancement(){
     menuFinancement.classList.toggle("hide");
-    /*buttonMenuAside.forEach(toggleHide);*/
+    /*buttonMenu.forEach(toggleHide);*/
 }
 function clickOutils(){
     menuOutils.classList.toggle("hide");
-    /* buttonMenuAside.forEach(toggleHide); */
+    /* buttonMenu.forEach(toggleHide); */
 }
  function clickContact(){
      clickButtons();
@@ -140,11 +158,13 @@ function clickOutils(){
     item=item.scrollIntoView({behavior: "smooth"});
  } */
 function startPage(){
-    buttonMenuAside.classList.add("hide");
+    buttonMenu.classList.add("hide");
+    buttonArrow.classList.add("hide");
     section.forEach(toggleFlex);
     section.forEach(toggleHide);
     sectionSearch.classList.remove("d-flex");
     sectionSearch.classList.remove("hide");
+    sousMenuAside.forEach(addHide);
 }
 /* document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
