@@ -1,12 +1,12 @@
 <?php 
 
 //Get variables from the form
-$name = $_POST['name'];
-$firstname = $_POST['firstname'];
-$email = $_POST['email'];
-$choix = $_POST['choix'];
-$message = $_POST['message'];
-$check = $_POST['check'];
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+$firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
+$email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+$choix = filter_var($_POST['choix'], FILTER_SANITIZE_STRING);
+$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+$check = filter_var($_POST['check'], FILTER_SANITIZE_STRING);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -17,12 +17,14 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'jfgeerinckx';                 // SMTP username
-    $mail->Password = 'secret';                           // SMTP password
+    $mail->Username = 'jfgeerinckx';                      // SMTP username
+    $password = $_POST[‘Fejg83fejg’];                     //variable pour protéger le password
+    $mail->Password = $password;                          // SMTP password
+    unset($password);
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
@@ -32,10 +34,11 @@ try {
     $mail->addAddress($email, $name);   
 
     //Attachments
-    $mail->addAttachment(‘images/phpmailer_mini.png’);
+    $attachement = "images/logo3.gif";
+    $mail->addAttachment($attachement);
     
     //body content
-    $body = "<strong>Bonjour</strong>, voici un mail que" . $name "a envoyé, c est un" .$choix "qui a comme message" .$message ;
+    $body = "<p><strong>Bonjour</strong>, " . $name ." a envoyé ce mail, c est un " . $choix . " qui a comme message " . $message ."</p>";
     
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -44,7 +47,7 @@ try {
     $mail->AltBody = strip_tags($body);
 
     $mail->send();
-    echo 'Message has been sent';
+   header("location:thanks.php");
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
