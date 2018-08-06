@@ -9,8 +9,8 @@
     animation-delay:0s;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    animation-timing-function: linear;  
-}  
+    animation-timing-function: ease-in;  
+}
 
 @-webkit-keyframes transition {
     0% {left: -100vw;}
@@ -40,15 +40,17 @@
  #button-menu-aside.transition:after{
     transform: rotate(180deg);
 } 
-#button-infos.sticky h2{
+.button-menu--round.sticky h2{
     position: fixed;
     top:70px;
     left:15px;
-    min-width: 3.5rem;
-    min-height: 3.5rem;
+    min-width: 3rem;
+    min-height: 3rem;
     border-width : 2px;
-    font-size : 1rem;
-    z-index:1000;
+    font-size : 0.8rem;
+    /* background-color: rgba(0, 0, 0,0.5);
+    color: white; */
+    z-index:800;
 }
 .button-menu--round.transition h2{
     background-color: rgba(246, 66, 66,1);

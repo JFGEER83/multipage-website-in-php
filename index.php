@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/576up.css">
     <link rel="stylesheet" href="assets/style/animations.css">
     <title>Document</title>
 </head>
@@ -22,8 +23,8 @@
         <span><i id="switch"class="fas fa-toggle-on"></i></span>
         <span>EN</span>      
     </div>
-    
-    <header id="header-main">
+    <header>
+    <div id="header-main">
         <h1 id="title-main"class="title-header">ASSOC.BE</h1>
         <div class="box-icons">
             <div class="button-icon">
@@ -36,10 +37,25 @@
                 <i class="fas fa-envelope"></i>
             </div>
         </div>
+    </div>
+    <div class="header-576up">
+        <div class="button-menu--round small">
+            <h2>About Us</h2>
+        </div>
+        <div class="button-menu--round small">
+            <h2>DOC</h2>
+        </div>
+        <div class="button-menu--round small">
+            <h2>INFOS</h2>
+        </div>
+        <div class="button-menu--round small">
+            <h2>CONTACT</h2>
+        </div>
+    </div>
     </header>
     <main>
         <div id="section-main">
-                <div  id= "menu-main" class="menu-main">
+                <div  id= "menu-main" class="menu-main initial">
                         <div id="button-about"class="button-menu--round">
                             <h2>About Us</h2>
                         </div>
@@ -53,7 +69,10 @@
                         </div>
                         <div id="section-doc" class="container-fluid section d-flex">
                             <div class="row">
-                   
+                                <div class="col-12">
+                                    <h2>TEST DOC</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta repellat placeat nam aspernatur optio at eum maxime animi voluptates quis exercitationem ullam perspiciatis sapiente iusto dignissimos laboriosam, in accusantium molestias quia, eveniet voluptate atque? Libero repudiandae iure optio unde fugiat itaque mollitia, possimus cum corrupti. Iusto delectus numquam quos.</p>
+                                </div>
                             </div>
                         </div>
                             <div id="button-infos"class="button-menu--round">
@@ -68,7 +87,8 @@
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
-                        <div id="section-contact" class="container section d-flex">
+
+                        <div id="section-contact" class="container-fluid section d-flex">
                            <div class="row">
                               <?php include("page_contact.php");?> 
                             </div>
@@ -90,7 +110,7 @@
         </div>
     </footer>        
 <script src="assets/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script>
@@ -108,7 +128,7 @@
        .stop()
        /* on fait maintenant l'animation vers le haut (scrollTop) vers 
         notre ancre target */
-       .animate({scrollTop: $(target).offset().top}, 1000 );
+       .animate({scrollTop: $(target).offset().top}, 500 );
     });
 });
 </script>

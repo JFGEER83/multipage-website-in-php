@@ -1,6 +1,6 @@
 <i id="button-menu-aside"class="fas fa-arrow-circle-right"></i>
     <button id="button-menu-asbl" class="button button-menu-aside">ASBL</button>
-        <div id= "menu-asbl" class="sous-menu-aside">
+        <div id= "menu-asbl" class="d-flex sous-menu-aside">
             <ul>
                 <li><button class="button button-sousmenu-aside"><a href="#ancre-asbl">Présentation</a></button> </li>
                 <li><button class="button button-sousmenu-aside"><a href="#ancre-loi">La loi</a></button> </li>
@@ -15,14 +15,14 @@
             </ul>
         </div>
     <button id="button-menu-assoc-faits" class="button button-menu-aside"><a href="#ancre-assoc"></a>Associations de faits</button>
-        <div id="menu-assoc-faits" class="sous-menu-aside"> 
+        <div id="menu-assoc-faits" class="d-flex sous-menu-aside"> 
             <ul>
                 <li>Presentations</li>
                 <li>Liens</li>
             </ul>
     </div>
     <button id="button-menu-chomage" class="button button-menu-aside">Chômage et bénévolat</button>
-        <div id="menu-chomage" class="sous-menu-aside">
+        <div id="menu-chomage" class="d-flex sous-menu-aside">
             <ul>
                 <li>
                     Lorem.
@@ -30,7 +30,7 @@
             </ul>
         </div>
     <button id="button-menu-financement" class="button button-menu-aside">Financements et Subsides</button>
-        <div id="menu-financement" class="sous-menu-aside"> 
+        <div id="menu-financement" class="d-flex sous-menu-aside"> 
             <ul>
                 <li>
                     Lorem, ipsum.
@@ -38,7 +38,7 @@
             </ul>
         </div>
     <button id="button-menu-outils" class="button button-menu-aside">Outils</button>
-        <div id="menu-outils" class=" sous-menu-aside">
+        <div id="menu-outils" class="d-flex sous-menu-aside">
             <ul>
                 <li>
                     Lorem, ipsum dolor.

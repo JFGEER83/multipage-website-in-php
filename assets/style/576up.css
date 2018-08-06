@@ -1,0 +1,91 @@
+@media only all and (min-width: 576px){
+    .hide{
+        display: inherit;
+    }
+    .sticky{
+        display: flex;
+    }
+  
+    header{
+      /*   color:rgba(246, 66, 66,1); */
+      color:rgba(255, 255, 255,0.8);
+        width: 80vw;
+        max-width: 920px;
+        margin:  0 0 0 auto;
+        background-image: url("../img/www-fotomelia-com-44.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius:  0 0 0 40%; 
+        z-index: 3000;
+    }
+    .box-icons{
+        display:none;
+    }
+    .header-576up{
+        display:flex;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width:60vw;
+        
+        margin: 0 auto;
+        flex-wrap: wrap;
+        transition: left 1s;
+        left:0vw;
+    }
+    .button-menu--round.small h2{
+        margin-top:1.5em;
+        min-width: 4.5rem;
+        min-height: 4.5rem;
+        border-width: 3px;
+        font-size: 0.9rem;
+        background-color: transparent;/* rgba(246, 66, 66,1); */ 
+    }
+   #body-main {
+       max-width: 999px;
+      width: 100vw;
+     margin: 0 auto;
+    /*  background-color: rgba(246, 66, 66,1);
+     color: white; */
+     background-color: white;
+     color:rgba(246, 66, 66,1);
+    }
+    .menu-main {
+        display:flex;
+        width: 80vw;
+        max-width: 920px;
+        margin:  0 0 0 auto;
+        color:black;
+        /* border: 1px solid black; */
+       /*  background-color: white; */
+       /*  background-image: url("../img/untitled-848-11541529706374dcaihywbkg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+    }
+    .button-menu--round h2{
+    /*     transition: none; */
+        background-color: rgba(246, 66, 66,0.8);
+        margin: 2em auto;
+
+    }
+    #section-aside{
+        left: 0;
+        width: 20vw;
+        max-width: 160px;
+
+    }
+    .button{
+        width: 10vw;
+        max-width: 140px;
+    }
+    #button-menu-aside{
+        width: 20vw;
+        max-width: 160px;
+    } 
+    .button-sousmenu-aside{
+        margin-left:0;
+    }
+    .button-sousmenu-aside:hover{
+        margin-left:5px;
+    }
+}

@@ -1,4 +1,5 @@
 /* Comportements suite au click sur les boutons du menu*/
+
 let ancreFormalites = document.getElementById("ancre-formalites")
 /* let buttonFormalites= document.getElementById("button-formalites"); */
 let buttonMenu = document.getElementById("button-menu");
@@ -16,6 +17,7 @@ let buttonMenuChomage= document.getElementById("button-menu-chomage");
 let buttonMenuFinancement= document.getElementById("button-menu-financement");
 let buttonMenuOutils= document.getElementById("button-menu-outils");
 let bodyMain=document.getElementById("body-main");
+let styleBody = getComputedStyle(bodyMain);
 let menuMain= document.getElementById("menu-main");
 let headerMain= document.getElementById("header-main");
 let buttonAbout= document.getElementById("button-about");
@@ -23,6 +25,7 @@ let buttonDoc= document.getElementById("button-doc");
 let buttonInfos= document.getElementById("button-infos");
 let buttonContact= document.getElementById("button-contact");
 let buttonsMenu= document.querySelectorAll(".button-menu--round");
+let buttonsMenuH2 = document.querySelectorAll(".button-menu--round > h2");
 let section= document.querySelectorAll(".section");
 let sectionAbout= document.getElementById("section-about");
 let sectionDoc= document.getElementById("section-doc");
@@ -45,17 +48,27 @@ buttonDoc.addEventListener("click",clickDoc);
 /*function clickFormalites(){
     ancreFormalites.scrollIntoView({behavior:"smooth"});
 }*/
-window.onscroll = function() {myFunction()};
+console.log(styleBody.width);
+
 
 /* var header = document.getElementById("myHeader"); */
-var sticky = buttonInfos.offsetTop;
-
+/* let sticky = buttonInfos.offsetTop; */
+window.onscroll = function() {myFunction()};
 function myFunction() {
-   
-  if (window.pageYOffset > 140) {
-    buttonInfos.classList.add("sticky");
-  }else{
-      buttonInfos.classList.remove("sticky");
+ if (styleBody.width<'576px'){
+    if (window.pageYOffset > 140) {
+        buttonsMenu.forEach(addsticky);
+        /* buttonsMenuH2.forEach(addsticky); */
+      /* buttonsMenu.classList.add("sticky"); */
+    }else {
+        buttonsMenu.forEach(removeSticky);
+        /* buttonsMenuH2.forEach(removeSticky); */
+    }
+ } 
+ else if (styleBody.width>='576px'){
+      buttonsMenu.forEach(removeSticky);
+     /*  buttonsMenuH2.forEach(removeSticky); */
+    /* buttonsMenu.classList.remove("sticky"); */
   }
 }
 function toggleFlex(item){
@@ -67,7 +80,13 @@ function toggleHide(item){
 function addHide(item){
     item=item.classList.add("hide");
 }
-/* function addEventScroll(item){
+function addsticky(item){
+    item=item.classList.add("sticky");
+}
+function removeSticky(item){
+    item=item.classList.remove("sticky");
+}
+    /* function addEventScroll(item){
     item=item.addEventListener("click",functionScroll);
 }
 function functionScroll(item){
@@ -84,7 +103,7 @@ function toggleTransition(item){
 function clickButtons(){
     buttonsMenu.forEach(toggleHide);
     sectionSearch.classList.toggle("hide");
-    menuMain.classList.toggle("transition"); 
+    menuMain.classList.toggle("transition");  
     headerMain.classList.toggle("transition");
     bodyMain.classList.toggle("transition"); 
 }
@@ -97,6 +116,7 @@ function clickButtons(){
      section.forEach(toggleTransition);
      buttonInfos.classList.toggle("hide");
      sectionInfos.classList.toggle("hide");
+     
      /*   buttonInfos.classList.toggle("relative"); */
      /* buttonInfos.classList.toggle("sticky"); */
  }
@@ -130,27 +150,35 @@ function clickOutils(){
 }
  function clickContact(){
      clickButtons();
+    /*  buttonArrow.classList.toggle("hide"); */
+     buttonMenu.classList.toggle("hide");
      buttonsMenu.forEach(toggleTransition);
      section.forEach(toggleTransition);
      buttonContact.classList.toggle("hide");
      sectionContact.classList.toggle("hide");
-     buttonContact.classList.toggle("fixed");
+     
  }
  function clickDoc(){
     clickButtons();
+   /*  buttonArrow.classList.toggle("hide"); */
+    buttonMenu.classList.toggle("hide");
     buttonsMenu.forEach(toggleTransition);
     section.forEach(toggleTransition);
     buttonDoc.classList.toggle("hide");
     sectionDoc.classList.toggle("hide");
-    buttonDoc.classList.toggle("fixed");
+   
+   
  }
  function clickAbout(){
     clickButtons();
+    /* buttonArrow.classList.toggle("hide"); */
+    buttonMenu.classList.toggle("hide");
     buttonsMenu.forEach(toggleTransition);
     section.forEach(toggleTransition);
     buttonAbout.classList.toggle("hide");
     sectionAbout.classList.toggle("hide");
-    buttonAbout.classList.toggle("fixed");
+   
+   
  }
  /* let ancres=document.querySelectorAll('a[href^="#"]');
  ancres.forEach("click",scroll);
@@ -165,6 +193,8 @@ function startPage(){
     sectionSearch.classList.remove("d-flex");
     sectionSearch.classList.remove("hide");
     sousMenuAside.forEach(addHide);
+    sousMenuAside.forEach(toggleFlex);
+   
 }
 /* document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
