@@ -3,10 +3,10 @@
 //Get variables from the form
 $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
-$email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-$choix = filter_var($_POST['choix'], FILTER_SANITIZE_STRING);
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$choix = $_POST['choix'];
 $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-$check = filter_var($_POST['check'], FILTER_SANITIZE_STRING);
+$check = $_POST['check'];
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -18,13 +18,13 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 try {
     //Server settings
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'jfgeerinckx';                      // SMTP username
-    $password = $_POST[‘Fejg83fejg’];                     //variable pour protéger le password
+    $password = 'Fejg83fejg';                             //variable pour protéger le password
     $mail->Password = $password;                          // SMTP password
-    unset($password);
+    //unset($password);
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
@@ -46,8 +46,10 @@ try {
     $mail->Body    = $body;
     $mail->AltBody = strip_tags($body);
 
-    $mail->send();
-   header("location:thanks.php");
+   if ($mail->send())
+    {
+       header("location:http://localhost/multipage-website-in-php/thanks.php");
+    exit;}
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
