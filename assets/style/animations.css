@@ -54,15 +54,25 @@
 }
 .button-menu--round.transition h2{
     background-color: rgba(246, 66, 66,1);
-
 }   
-
 .button-menu--round.relative h2{
     position: relative;
     top:0;
     left:0;
 }
-  
+
+/* .button-menu--round.small.sticky h2{
+    position: fixed;
+    top:0;
+    left:0; */
+   /*  min-width: 3rem;
+    min-height: 3rem;
+    border-width : 2px;
+    font-size : 0.8rem; */
+    /* background-color: rgba(0, 0, 0,0.5);
+    color: white; */
+    /* z-index:800; */
+ 
  
 #body-main{
     transition: background-color 0.5s ease-in, color 0.5s ease-in;

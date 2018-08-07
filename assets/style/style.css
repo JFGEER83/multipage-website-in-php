@@ -44,6 +44,12 @@ p {
 header {
     color:white;
 }
+#message-main1{
+    display:none;
+}
+#message-main2{
+    display:none;
+}
 .title-header{
     font-size: 2em;
     text-align: center;
@@ -89,10 +95,11 @@ header {
                 /*MENU*/
 .menu-main {
     display:flex;
-    position: relative;
+     position: relative; 
+   /*  position:absolute; */
     justify-content: space-evenly;
-    align-items: flex-start;
-    width:100vw;
+    align-items: center;
+    width:90vw;
     
     margin: 0 auto;
     flex-wrap: wrap;
@@ -194,10 +201,14 @@ overflow: visible;
 margin: 2em auto 2em auto;
 font-size: 0.8em;
 }
+#section-search{
+    position: relative;
+}
 .search-bar{
     margin: 2em auto;
 }
 .search-bar input{
+    position:initial;
     width: 80vw;
     max-width: 400px;
     height: 2.5em;
@@ -238,20 +249,23 @@ ul .fa-square{
     display: flex;
     flex-direction: column;
     width: 100px;
-    background-color: transparent;
+   /*  background-color: transparent; */
+   background-color:transparent;
     color: black;
     z-index:1000;
     position: fixed;
     top: 140px;
     left:-100px;
     transition: left 0.3s ease-in;
+    border-radius: 0 0 0 0;
+    
     
 }
 #button-menu-aside{
     position: relative;
-    left: 20px;
+    width: 120px;
     color:rgba(246, 66, 66,0.8);
-    background-color:  white;
+    background-color:  transparent;
     text-align: end;
    /* transform: rotate(0deg);
      transition: transform 1s; */
@@ -272,7 +286,8 @@ ul .fa-square{
     border-style: none;
 }
 .button-menu-aside{
-    background-color:rgba(246, 66, 66,0.8);;
+     background-color:rgba(246, 66, 66,0.8);
+    /* background-color: rgba(255, 255, 255,0.5); */
     color: white;
    
 }
@@ -282,7 +297,7 @@ ul .fa-square{
     font-weight: 300;
 }
 .button-sousmenu-aside{
-    background-color:rgba(255, 255, 255, 0.9);
+    background-color:rgba(255, 255, 255, 0.5);
     color: rgba(246, 66, 66,1);
     height: 25px;
     width: 100px;

@@ -25,7 +25,8 @@ let buttonDoc= document.getElementById("button-doc");
 let buttonInfos= document.getElementById("button-infos");
 let buttonContact= document.getElementById("button-contact");
 let buttonsMenu= document.querySelectorAll(".button-menu--round");
-let buttonsMenuH2 = document.querySelectorAll(".button-menu--round > h2");
+let buttonsMenuSmall = document.querySelectorAll(".button-menu--round.small");
+let header576Up = document.getElementById("header-576up");
 let section= document.querySelectorAll(".section");
 let sectionAbout= document.getElementById("section-about");
 let sectionDoc= document.getElementById("section-doc");
@@ -64,9 +65,13 @@ function myFunction() {
         buttonsMenu.forEach(removeSticky);
         /* buttonsMenuH2.forEach(removeSticky); */
     }
- } 
- else if (styleBody.width>='576px'){
-      buttonsMenu.forEach(removeSticky);
+ }else if (styleBody.width>='576px'){
+     if(window.pageYOffset >600){
+        header576Up.classList.add("sticky");
+     }else{
+        header576Up.classList.remove("sticky");
+     }
+      
      /*  buttonsMenuH2.forEach(removeSticky); */
     /* buttonsMenu.classList.remove("sticky"); */
   }

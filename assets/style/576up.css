@@ -5,51 +5,156 @@
     .sticky{
         display: flex;
     }
-  
+  body {
+      background-color: transparent;
+  }
+  html{
+      max-width: 999px;
+  }
+  #body-main {
+    max-width: 999px;
+   width: 100vw;
+  margin: 0 auto;
+ /*  background-color: rgba(246, 66, 66,1);
+  color: white; */
+  background-color: transparent;
+  color:rgba(246, 66, 66,1);
+ }
     header{
+        
       /*   color:rgba(246, 66, 66,1); */
-      color:rgba(255, 255, 255,0.8);
-        width: 80vw;
-        max-width: 920px;
+        color:white;
+        width: 100vw;
+        height: 100vh;
+        /* max-width: 920px; */
         margin:  0 0 0 auto;
-        background-image: url("../img/www-fotomelia-com-44.jpg");
+        border:  1px dotted rgba(0, 0, 0, 0.7);
+      /*   background:url("../img/background-white.jpg");
         background-size: cover;
-        background-repeat: no-repeat;
-        border-radius:  0 0 0 40%; 
-        z-index: 3000;
+        background-repeat: no-repeat; */
+     
+        background-color: transparent;
+        
+       
+       
+        
+        /* background: -webkit-linear-gradient(90deg, rgb(10, 27, 43), rgb(20, 55, 90));
+        background: linear-gradient(90deg, rgb(10, 27, 43), rgb(20, 55, 90)); */
+        
+
+       /*  border-radius:  0 0 0 40%; */ 
+      
+    }
+    #particles-js{
+      
+        position: absolute;
+         background-image: url("../img/photo_header3.jpg");
+       filter:grayscale(40%);
+        width:100%;
+       height:100vh;
+       
+         background-repeat: no-repeat; 
+        background-size: cover; 
+       
+    }
+    
+    #header-main{
+        position:absolute;
+        order:2;
+       
+        
+    }
+    .header-576up{
+        display:flex;
+        position: absolute;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width:60vw;
+        height:20vh;
+        /* background: linear-gradient(90deg, rgba(10, 27, 43,0.5), rgba(20, 55, 90,0.5)); */
+        margin: 0 auto;
+        flex-wrap: wrap;
+        transition: left 1s;
+        left:18vw;
+        top: 0vh;
+        color:white; 
+        background-color: transparent;
+        order:1;
+       
+    }
+    #header-576up.sticky{
+        position: fixed;
+        top: 0vh;
+        left:0vw;
+        
+        
+       
+    }
+    #header-576up.sticky .button-menu--round.small h2{ 
+        color: rgba(246, 66, 66,0.7);
+        border-color:  rgba(246, 66, 66,0.7);
+        cursor: pointer;
+        z-index: 1000;
+      
+    }
+    #header-576up.sticky .button-menu--round.small h2 A{ 
+        color: rgba(246, 66, 66,0.7);
+        z-index: 1000;
+    }
+    .title-header{
+        font-size: 3.5em;
+        text-align: center;
+        background-color: transparent;
+        position:absolute;
+    }
+    #title-main{
+        z-index: 100;
+        left:35vw;
+        top: 20vh;
+    }
+    #message-main1{
+        display:block;
+        font-size:1.5em;
+        letter-spacing: 0.3em;
+        left:25vw;
+        top: 40vh;
+    }
+    #message-main2{
+        display: block;
+        font-size:1.5em;
+        letter-spacing: 0.3em;
+        left:20vw;
+        top: 50vh;
+    }
+    #title-second-color{
+        color:rgba(246, 66, 66,0.7);
+        font-size: 1.2em;
     }
     .box-icons{
         display:none;
     }
-    .header-576up{
-        display:flex;
-        position: relative;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        width:60vw;
-        
-        margin: 0 auto;
-        flex-wrap: wrap;
-        transition: left 1s;
-        left:0vw;
-    }
+   
     .button-menu--round.small h2{
+        display:flex;
+        color: rgba(255, 255, 255, 0.7);
+        border-color: rgba(255, 255, 255, 0.7);
         margin-top:1.5em;
-        min-width: 4.5rem;
-        min-height: 4.5rem;
-        border-width: 3px;
-        font-size: 0.9rem;
-        background-color: transparent;/* rgba(246, 66, 66,1); */ 
+        min-width: 3rem;
+        min-height: 3rem;
+        border-width: 2px;
+        font-size: 0.6rem;
+        background-color: transparent;
+    
+        opacity:1;
     }
-   #body-main {
-       max-width: 999px;
-      width: 100vw;
-     margin: 0 auto;
-    /*  background-color: rgba(246, 66, 66,1);
-     color: white; */
-     background-color: white;
-     color:rgba(246, 66, 66,1);
-    }
+   #menu-main{
+       background-color: transparent;
+   } 
+   .section{
+       background-color: transparent;
+   }
+  
+  
     .menu-main {
         display:flex;
         width: 80vw;
@@ -63,23 +168,44 @@
         background-repeat: no-repeat; */
     }
     .button-menu--round h2{
-    /*     transition: none; */
-        background-color: rgba(246, 66, 66,0.8);
+        display: none;
+        background-color: rgba(255, 255, 255);
         margin: 2em auto;
+        color: rgba(0, 0, 0, 0.7);
 
     }
+    /* #button-about{order:2;}
+    #section-about{order:3;}
+    #button-doc{order:4;}
+    #section-doc{order:5;}
+    #button-infos{order:6;}
+    #section-infos{order:7;}
+    #button-contact{order:8;}
+    #section-contact{order:9; */
+/*     #section-search{
+    position: absolute;
+    top:-40vh;
+    left:35vh;
+} */
+
     #section-aside{
         left: 0;
         width: 20vw;
+        min-width: 100px;
         max-width: 160px;
-
+        filter: grayscale(20%);
+    }
+    main div #section-main {
+        z-index: -1;
     }
     .button{
-        width: 10vw;
-        max-width: 140px;
+        width: 20vw;
+        min-width: 100px;
+        max-width: 160px;
     }
     #button-menu-aside{
         width: 20vw;
+        min-width: 100px;
         max-width: 160px;
     } 
     .button-sousmenu-aside{
@@ -87,5 +213,10 @@
     }
     .button-sousmenu-aside:hover{
         margin-left:5px;
+    }
+    #section-search{
+        position: absolute;
+        top:-20vh;
+        left:30vw;
     }
 }

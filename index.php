@@ -12,7 +12,6 @@
     <title>Document</title>
 </head>
 <body id="body-main">
-
     <i id="button-menu" class="fas fa-bars"></i>
     <div id="section-aside">
             <?php include("menu.php");?>
@@ -24,34 +23,40 @@
         <span>EN</span>      
     </div>
     <header>
-    <div id="header-main">
-        <h1 id="title-main"class="title-header">ASSOC.BE</h1>
-        <div class="box-icons">
-            <div class="button-icon">
-                <i class="fas fa-mobile-alt"></i>
+        <div id="particles-js" class ="background-header">
+            <div id="header-main">
+                <h1 id="title-main"class="title-header">ASSOC<span id="title-second-color">.BE</span></h1>
+                <h2 id ="message-main1"class="title-header">Envie de monter votre ASBL?</h2>
+                <h2 id ="message-main2"class="title-header">Nous avons la réponse à vos questions</h2>
+                <div class="box-icons">
+                    <div class="button-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="button-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="button-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
             </div>
-            <div class="button-icon">
-                <i class="fas fa-share-alt"></i>
-            </div>
-            <div class="button-icon">
-                <i class="fas fa-envelope"></i>
-            </div>
+            <div>
+                <div id="header-576up" class="header-576up">
+                    <div class="button-menu--round small">
+                        <h2><a href="#section-about">About Us</a></h2>
+                    </div>
+                    <div class="button-menu--round small">
+                        <h2><a href="#section-doc">DOC</a></h2>
+                    </div>
+                    <div class="button-menu--round small">
+                        <h2><a href="#section-infos">INFOS</a></h2>
+                    </div>
+                    <div class="button-menu--round small">
+                        <h2><a href="#section-contact">CONTACT</a></h2>
+                    </div>
+                </div>
+            </div>      
         </div>
-    </div>
-    <div class="header-576up">
-        <div class="button-menu--round small">
-            <h2>About Us</h2>
-        </div>
-        <div class="button-menu--round small">
-            <h2>DOC</h2>
-        </div>
-        <div class="button-menu--round small">
-            <h2>INFOS</h2>
-        </div>
-        <div class="button-menu--round small">
-            <h2>CONTACT</h2>
-        </div>
-    </div>
     </header>
     <main>
         <div id="section-main">
@@ -108,11 +113,12 @@
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-facebook-f"></i>
         </div>
-    </footer>        
+    </footer>       
 <script src="assets/js/script.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
 <script>
     $(document).ready(function(){
     // au clic sur un lien
@@ -132,5 +138,15 @@
     });
 });
 </script>
+<script>
+    if(styleBody.width>'576px'){
+  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+  particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+    }
+  
+</script>
+
 </body>
 </html>

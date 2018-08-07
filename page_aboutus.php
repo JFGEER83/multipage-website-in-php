@@ -2,9 +2,9 @@
 <div class="col-12">
     <h2 class="section-title-primary">A PROPOS</h2>
 </div>
-<div class="col-12"><img src="assets/img/auteur.jpg" alt="photo auteur"></div>
+<div class="col-12 col-sm-6 align-self-center"><img src="assets/img/auteur.jpg" width="100%" height="auto" alt="photo auteur"></div>
 
-<div class="col-12 mx-auto">
+<div class="col-12 col-sm-6 mx-auto">
     <small>Art. 27 de la Constitution Belge</small>   
     <p>Les Belges ont le droit de s'associer; ce droit ne peut être soumis à aucune mesure préventive.</p> 
     <a href="http://www.senate.be/doc/const_fr.html">Source</a>
