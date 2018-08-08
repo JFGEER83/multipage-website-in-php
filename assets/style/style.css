@@ -96,7 +96,7 @@ header {
 .menu-main {
     display:flex;
      position: relative; 
-   /*  position:absolute; */
+/*     position:absolute;  */
     justify-content: space-evenly;
     align-items: center;
     width:90vw;
@@ -178,12 +178,11 @@ header {
 text-align: center;
 text-transform: uppercase;
 letter-spacing: 0.5em;
-
 padding-bottom: 1.5em;
-border-bottom: 5px solid rgba(246, 66, 66,0.8);
+border-bottom: 5px solid rgba(255, 255, 255,0.8);
 border-radius: 0 0 30% 0;
-width: 70%;
-max-width: 200px;
+/* width: 70%;
+max-width: 200px; */
 margin: 2em auto 2em auto;
 }
 .section-title-third{
@@ -306,7 +305,7 @@ ul .fa-square{
     text-transform: uppercase;
     border-radius: 5px;
     border-color: rgba(246, 66, 66,0.4);
-    text-align: right;
+    text-align: center;
 
 }
 .button-sousmenu-aside:hover{
@@ -314,7 +313,7 @@ ul .fa-square{
 }
 .sous-menu-aside{
     justify-content: flex-start;
-    background-color:rgba(255, 255, 255, 0.9);;
+    background-color:rgba(255, 255, 255, 0.9);
     color: rgba(246, 66, 66,1);
 }
 

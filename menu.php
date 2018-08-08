@@ -1,6 +1,6 @@
 <i id="button-menu-aside"class="fas fa-arrow-circle-right"></i>
     <button id="button-menu-asbl" class="button button-menu-aside">ASBL</button>
-        <div id= "menu-asbl" class="d-flex sous-menu-aside">
+        <div id= "menu-asbl" class="d-flex justify-content-center sous-menu-aside">
             <ul>
                 <li><button class="button button-sousmenu-aside"><a href="#ancre-asbl">Présentation</a></button> </li>
                 <li><button class="button button-sousmenu-aside"><a href="#ancre-loi">La loi</a></button> </li>

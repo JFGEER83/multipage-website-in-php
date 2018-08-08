@@ -16,15 +16,17 @@
     <div id="section-aside">
             <?php include("menu.php");?>
     </div>
-   
-    <div class="box-lang-icon">
+   <!--  <div class="box-lang-icon">
         <span>FR</span>       
         <span><i id="switch"class="fas fa-toggle-on"></i></span>
         <span>EN</span>      
-    </div>
+    </div> -->
+    
     <header>
+    
         <div id="particles-js" class ="background-header">
             <div id="header-main">
+            
                 <h1 id="title-main"class="title-header">ASSOC<span id="title-second-color">.BE</span></h1>
                 <h2 id ="message-main1"class="title-header">Envie de monter votre ASBL?</h2>
                 <h2 id ="message-main2"class="title-header">Nous avons la réponse à vos questions</h2>
@@ -40,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+        <div>
                 <div id="header-576up" class="header-576up">
                     <div class="button-menu--round small">
                         <h2><a href="#section-about">About Us</a></h2>
@@ -139,7 +141,7 @@
 });
 </script>
 <script>
-    if(styleBody.width>'576px'){
+    if(styleBody.width>'577px'){
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');

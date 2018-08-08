@@ -1,5 +1,38 @@
 /* Comportements suite au click sur les boutons du menu*/
 
+/*Comportement Hover des images du menu ASBL*/
+
+let titreAsbl= document.getElementById("titre-asbl");
+let imageAsbl = document.getElementById("image-asbl");
+let boxAsbl = document.getElementById("box-asbl");
+boxAsbl.addEventListener("mouseover",hideAsbl);
+boxAsbl.addEventListener("mouseleave",showAsbl);
+function hideAsbl(){
+    imageAsbl.classList.add("hide576");
+    titreAsbl.classList.remove("hide576");
+    titreAsbl.classList.add("d-flex");
+}
+function showAsbl(){
+    titreAsbl.classList.remove("d-flex");
+    titreAsbl.classList.add("hide576");
+    imageAsbl.classList.remove("hide576");
+}
+let titreLoi=document.getElementById("ancre-loi");
+let imageLoi=document.getElementById("image-loi");
+let boxLoi = document.getElementById("box-loi");
+boxLoi.addEventListener("mouseover",hideLoi);
+boxLoi.addEventListener("mouseleave",showLoi);
+function hideLoi(){
+    imageLoi.classList.add("hide576");
+    titreLoi.classList.remove("hide576");
+    titreLoi.classList.add("d-flex");
+}
+function showLoi(){
+    titreLoi.classList.remove("d-flex");
+    titreLoi.classList.add("hide576");
+    imageLoi.classList.remove("hide576");
+}
+let ancreAsbl = document.getElementById("asbl");
 let ancreFormalites = document.getElementById("ancre-formalites")
 /* let buttonFormalites= document.getElementById("button-formalites"); */
 let buttonMenu = document.getElementById("button-menu");
@@ -39,8 +72,8 @@ buttonMenuAssocFaits.addEventListener("click",clickAssocFaits);
 buttonMenuChomage.addEventListener("click",clickChomage);
 buttonMenuFinancement.addEventListener("click",clickFinancement);
 buttonMenuOutils.addEventListener("click", clickOutils);
-buttonArrow.addEventListener("mouseover",clickAside);
-sectionAside.addEventListener("mouseleave",clickAside);
+buttonArrow.addEventListener("click",clickAside);
+/* sectionAside.addEventListener("mouseleave",clickAside); */
 buttonAbout.addEventListener("click",clickAbout);
 buttonInfos.addEventListener("click",clickInfos);
 buttonContact.addEventListener("click",clickContact);
@@ -50,26 +83,41 @@ buttonDoc.addEventListener("click",clickDoc);
     ancreFormalites.scrollIntoView({behavior:"smooth"});
 }*/
 console.log(styleBody.width);
-
+console.log(window.pageYOffset);
+console.log(sectionInfos.offsetTop);
 
 /* var header = document.getElementById("myHeader"); */
 /* let sticky = buttonInfos.offsetTop; */
 window.onscroll = function() {myFunction()};
 function myFunction() {
- if (styleBody.width<'576px'){
+    let stickyInfos= sectionInfos.offsetTop;
+    let stickyContact= sectionContact.offsetTop;
+  if(styleBody.width>='1001px'){ /*576*/
+    if (window.pageYOffset > stickyInfos+300 && window.pageYOffset < stickyContact+500 ){
+        sectionAside.classList.add("transition");
+    }else{
+        sectionAside.classList.remove("transition");
+    }  
+  }  
+  
+ if (styleBody.width<'1000px'){
     if (window.pageYOffset > 140) {
         buttonsMenu.forEach(addsticky);
         /* buttonsMenuH2.forEach(addsticky); */
       /* buttonsMenu.classList.add("sticky"); */
+    
     }else {
         buttonsMenu.forEach(removeSticky);
         /* buttonsMenuH2.forEach(removeSticky); */
     }
- }else if (styleBody.width>='576px'){
+ }else if (styleBody.width>='1001px'){  /*576*/
      if(window.pageYOffset >600){
         header576Up.classList.add("sticky");
-     }else{
+        /* buttonsMenuSmall.forEach(addsticky); */
+     }
+     else{
         header576Up.classList.remove("sticky");
+        /* buttonsMenuSmall.forEach(removeSticky); */
      }
       
      /*  buttonsMenuH2.forEach(removeSticky); */
