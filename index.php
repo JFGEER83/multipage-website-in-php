@@ -30,7 +30,7 @@
 
 
     <main role="main" class="container">
-<form action="cible.php" method="post">
+<form action="cible.php" method="post" enctype="multipart/form-data">
     <div class="form-group form-inline">
        <label for="name" class="col-2">Nom</label>
        <input type="text" id="name" name="name" class="form-control col-md-6" placeholder="Nom de famille">
@@ -65,6 +65,10 @@
         <input class="form-check-input" type="radio" name="check" id="txt" value=".txt">
         <label class="form-check-label" for="txt">.txt</label>
       </div>
+     <label class="custom-file" id="customFile">
+         <input type="file" size="32" name="image_field" value="">
+         <input type="submit" name="Submit" value="upload">
+     </label>
     <div>
         <button type="submit" class="btn btn-light">Envoyer</button>
     </div>
