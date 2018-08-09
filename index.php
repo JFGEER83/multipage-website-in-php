@@ -23,13 +23,27 @@
     </div> -->
     
     <header>
-    
-        <div id="particles-js" class ="background-header">
-            <div id="header-main">
-            
-                <h1 id="title-main"class="title-header">ASSOC<span id="title-second-color">.BE</span></h1>
-                <h2 id ="message-main1"class="title-header">Envie de monter votre ASBL?</h2>
-                <h2 id ="message-main2"class="title-header">Nous avons la réponse à vos questions</h2>
+    <div id="header-main">
+            <div id="particles-js" class ="background-header"></div>
+            <div id="box-main">
+                <div id="title-main">
+                    <h1 class="title-header">ASSOC<span id="title-second-color">.BE</span></h1>
+                </div>
+                <div id="box-message1">
+                        <h2 id ="message-main1">Envie de créer votre ASBL?</h2>
+                    </div>
+                    <div id="box-message2">
+                        <h2 id ="message-main2">Nous avons la réponse à vos questions</h2>
+                    </div>
+                <div id="banner-header"class="title-header">
+                    <h2 id="message-main3"class="mt-3 col-10">N'hésitez plus!!!</h2>
+                    <button id="button-header">CONTACTEZ-NOUS</button>
+                </div>
+           
+            </div>
+           
+                <div id="title-phone"><h1>ASSOC.be</h1></div>
+               
                 <div class="box-icons">
                     <div class="button-icon">
                         <i class="fas fa-mobile-alt"></i>
@@ -41,19 +55,22 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                 </div>
-            </div>
-        <div>
+            
+    </div>
                 <div id="header-576up" class="header-576up">
-                    <div class="button-menu--round small">
+                     <div id="button-sticky-home"class="button-menu--round small">
+                        <h2><a href="#title-main">HOME</a></h2>
+                    </div>
+                    <div id="button-sticky-about"class="button-menu--round small">
                         <h2><a href="#section-about">About Us</a></h2>
                     </div>
-                    <div class="button-menu--round small">
+                    <div id="button-sticky-doc"class="button-menu--round small">
                         <h2><a href="#section-doc">DOC</a></h2>
                     </div>
-                    <div class="button-menu--round small">
+                    <div id="button-sticky-infos"class="button-menu--round small">
                         <h2><a href="#section-infos">INFOS</a></h2>
                     </div>
-                    <div class="button-menu--round small">
+                    <div id="button-sticky-contact"class="button-menu--round small">
                         <h2><a href="#section-contact">CONTACT</a></h2>
                     </div>
                 </div>
@@ -94,7 +111,6 @@
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
-
                         <div id="section-contact" class="container-fluid section d-flex">
                            <div class="row">
                               <?php include("page_contact.php");?> 
@@ -141,12 +157,10 @@
 });
 </script>
 <script>
-    if(styleBody.width>'577px'){
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
 });
-    }
   
 </script>
 

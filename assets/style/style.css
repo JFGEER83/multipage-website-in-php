@@ -22,9 +22,19 @@ time, mark, audio, video {
 .hide {
     display:none;
 }
+.hide576{
+    display: none; 
+}
 .fixed {
     position: fixed;
 }
+#particles-js{
+  display: none;
+}
+#box-main{
+    display: none;
+}
+
 p {
     margin-top: 1.5em;
 }
@@ -49,6 +59,12 @@ header {
 }
 #message-main2{
     display:none;
+}
+#title-phone{
+    display: block;
+    text-align: center;
+    margin-top:1em;
+    font-size: 2em;
 }
 .title-header{
     font-size: 2em;
@@ -99,7 +115,7 @@ header {
 /*     position:absolute;  */
     justify-content: space-evenly;
     align-items: center;
-    width:90vw;
+    width:100vw;
     
     margin: 0 auto;
     flex-wrap: wrap;
@@ -163,8 +179,10 @@ header {
     line-height: 2em;
     padding-left:1em;
     padding-right: 1em;
-    
-
+}
+p {
+    font-size: 1.2em;
+    margin:1em;
 }
 .section-title-primary {
     font-size: 2em;
@@ -193,13 +211,37 @@ color: black;
 padding:0;
 /* border-top: 1px dotted rgba(246, 66, 66,0.8); */
 /* border-bottom: 1px dotted rgba(246, 66, 66,0.8); */
-
-width: 30vw;
-max-width: 150px;
+height:100px;
+width: 50vw;
+max-width: 250px;
 overflow: visible; 
-margin: 2em auto 2em auto;
-font-size: 0.8em;
+margin: 1em auto 1em auto;
+font-size: 1em;
 }
+.box-title{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-top: 2em;
+    margin-bottom:2em;
+}
+.image-title{
+    height:100%;
+    min-width: 500px;
+    width:100%;
+    margin:1em auto 1em auto;
+}
+.title576{
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(246, 66, 66,1);
+    color:white;
+    height: 100%;
+    min-height: 30vh;
+    width:100%;
+  } 
 #section-search{
     position: relative;
 }
@@ -278,14 +320,20 @@ ul .fa-square{
 } */
 
 .button{
+    text-align:center;
     width: 100px;
     height: 50px;
     cursor: pointer;
     z-index:800;
     border-style: none;
 }
-.button-menu-aside{
-     background-color:rgba(246, 66, 66,0.8);
+ .button-menu-aside{
+  display:none;
+     
+} 
+#button-menu-asbl{
+    display:flex;
+    background-color:rgba(246, 66, 66,0.8);
     /* background-color: rgba(255, 255, 255,0.5); */
     color: white;
    

@@ -17,6 +17,9 @@ function showAsbl(){
     titreAsbl.classList.add("hide576");
     imageAsbl.classList.remove("hide576");
 }
+
+/*Comportement Hover des images du menu Loi*/
+
 let titreLoi=document.getElementById("ancre-loi");
 let imageLoi=document.getElementById("image-loi");
 let boxLoi = document.getElementById("box-loi");
@@ -32,6 +35,43 @@ function showLoi(){
     titreLoi.classList.add("hide576");
     imageLoi.classList.remove("hide576");
 }
+
+/*Comportement Hover des images du menu formalités*/
+let titreStep=document.getElementById("ancre-formalites");
+let imageStep=document.getElementById("image-step");
+let boxStep = document.getElementById("box-step");
+boxStep.addEventListener("mouseover",hideStep);
+boxStep.addEventListener("mouseleave",showStep);
+function hideStep(){
+    imageStep.classList.add("hide576");
+    titreStep.classList.remove("hide576");
+    titreStep.classList.add("d-flex");
+}
+function showStep(){
+    titreStep.classList.remove("d-flex");
+    titreStep.classList.add("hide576");
+    imageStep.classList.remove("hide576");
+}
+
+/*Comportement Hover des images du menu Personnel*/
+
+let titrePersonnel=document.getElementById("ancre-personnel");
+let imagePersonnel=document.getElementById("image-personnel");
+let boxPersonnel = document.getElementById("box-personnel");
+boxPersonnel.addEventListener("mouseover",hidePersonnel);
+boxPersonnel.addEventListener("mouseleave",showPersonnel);
+function hidePersonnel(){
+    imagePersonnel.classList.add("hide576");
+    titrePersonnel.classList.remove("hide576");
+    titrePersonnel.classList.add("d-flex");
+}
+function showPersonnel(){
+    titrePersonnel.classList.remove("d-flex");
+    titrePersonnel.classList.add("hide576");
+    imagePersonnel.classList.remove("hide576");
+}
+
+
 let ancreAsbl = document.getElementById("asbl");
 let ancreFormalites = document.getElementById("ancre-formalites")
 /* let buttonFormalites= document.getElementById("button-formalites"); */
@@ -44,7 +84,7 @@ let menuChomage= document.getElementById("menu-chomage");
 let menuFinancement= document.getElementById("menu-financement");
 let menuOutils= document.getElementById("menu-outils");
 let sousMenuAside = document.querySelectorAll(".sous-menu-aside");
-let buttonMenuASBL =document.getElementById("button-menu-asbl");
+/* let buttonMenuASBL =document.getElementById("button-menu-asbl"); */
 let buttonMenuAssocFaits= document.getElementById("button-menu-assoc-faits");
 let buttonMenuChomage= document.getElementById("button-menu-chomage");
 let buttonMenuFinancement= document.getElementById("button-menu-financement");
@@ -67,7 +107,7 @@ let sectionInfos= document.getElementById("section-infos");
 let sectionContact= document.getElementById("section-contact");
 let sectionSearch= document.getElementById("section-search");
 /*buttonFormalites.addEventListener("click", clickFormalites);*/
-buttonMenuASBL.addEventListener("click",clickAsbl);
+/* buttonMenuASBL.addEventListener("click",clickAsbl); */
 buttonMenuAssocFaits.addEventListener("click",clickAssocFaits);
 buttonMenuChomage.addEventListener("click",clickChomage);
 buttonMenuFinancement.addEventListener("click",clickFinancement);
@@ -92,11 +132,15 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     let stickyInfos= sectionInfos.offsetTop;
     let stickyContact= sectionContact.offsetTop;
+    let stickyButtonInfos= document.getElementById("button-sticky-infos");
   if(styleBody.width>='1001px'){ /*576*/
     if (window.pageYOffset > stickyInfos+300 && window.pageYOffset < stickyContact+500 ){
         sectionAside.classList.add("transition");
+        stickyButtonInfos.classList.add("transition");
+
     }else{
         sectionAside.classList.remove("transition");
+        stickyButtonInfos.classList.remove("transition");
     }  
   }  
   
@@ -176,6 +220,7 @@ function clickButtons(){
  function clickAside(){
     sectionAside.classList.toggle("transition");
     sousMenuAside.forEach(addHide);
+    menuAsbl.classList.toggle("hide");
     
     /* buttonMenu.forEach(toggleHide);  */
 }

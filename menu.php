@@ -3,45 +3,45 @@
         <div id= "menu-asbl" class="d-flex justify-content-center sous-menu-aside">
             <ul>
                 <li><button class="button button-sousmenu-aside"><a href="#ancre-asbl">Présentation</a></button> </li>
-                <li><button class="button button-sousmenu-aside"><a href="#ancre-loi">La loi</a></button> </li>
-                <li><button class="button button-sousmenu-aside"><a href="#ancre-formalites">formalités</a></button> </li> 
-                <li><button class="button button-sousmenu-aside"><a href="#ancre-status">Les status</a></button>  </li>
-                <li><button class="button button-sousmenu-aside"><a href="#ancre-gestion">La gestion</a></button> </li>
-                <li><button class="button button-sousmenu-aside"><a href="#ancre-membres">Les membres</a></button>  </li>
-                <li><button class="button button-sousmenu-aside">Le personnel</button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#box-loi">La loi</a></button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#box-step">formalités</a></button> </li> 
+                <li><button class="button button-sousmenu-aside"><a href="#box-personnel">Le personnel</a></button>  </li>
+                <!-- <li><button class="button button-sousmenu-aside"><a href="#ancre-gestion">La gestion</a></button> </li>
+                <li><button class="button button-sousmenu-aside"><a href="#ancre-membres">Les membres</a></button>  </li> -->
+               <!--  <li><button class="button button-sousmenu-aside">Le personnel</button> </li>
                 <li><button class="button button-sousmenu-aside">Les formations</button> </li>
                 <li><button class="button button-sousmenu-aside">La dissolution</button> </li>
-                <li><button class="button button-sousmenu-aside">Liens</button> </li>
+                <li><button class="button button-sousmenu-aside">Liens</button> </li> -->
             </ul>
         </div>
     <button id="button-menu-assoc-faits" class="button button-menu-aside"><a href="#ancre-assoc"></a>Associations de faits</button>
         <div id="menu-assoc-faits" class="d-flex sous-menu-aside"> 
-            <ul>
+           <!--  <ul>
                 <li>Presentations</li>
                 <li>Liens</li>
-            </ul>
+            </ul> -->
     </div>
     <button id="button-menu-chomage" class="button button-menu-aside">Chômage et bénévolat</button>
         <div id="menu-chomage" class="d-flex sous-menu-aside">
-            <ul>
+            <!-- <ul>
                 <li>
                     Lorem.
                 </li>
-            </ul>
+            </ul> -->
         </div>
     <button id="button-menu-financement" class="button button-menu-aside">Financements et Subsides</button>
         <div id="menu-financement" class="d-flex sous-menu-aside"> 
-            <ul>
+           <!--  <ul>
                 <li>
                     Lorem, ipsum.
                 </li>
-            </ul>
+            </ul> -->
         </div>
     <button id="button-menu-outils" class="button button-menu-aside">Outils</button>
         <div id="menu-outils" class="d-flex sous-menu-aside">
-            <ul>
+          <!--   <ul>
                 <li>
                     Lorem, ipsum dolor.
                 </li>
-            </ul>
+            </ul> -->
         </div>
