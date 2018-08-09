@@ -1,4 +1,6 @@
 <?php 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 //Get variables from the form
 $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
@@ -7,14 +9,25 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 $choix = $_POST['choix'];
 $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 $check = $_POST['check'];
+//test code upload
+$handle = new upload($_FILES['image_field']);
+if ($handle->uploaded) {
+  $handle->image_convert = 'jpg', 'jpeg', 'png', 'gif';
+  $handle->process('./images');
+  if ($handle->processed) {
+    echo 'image resized';
+    $handle->clean();
+  } else {
+    echo 'error : ' . $handle->error;
+  }
+}
+//fin test code upload
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+/*use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;*/
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-
-
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {

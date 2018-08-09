@@ -2,7 +2,7 @@
 $handle = new upload($_FILES['image_field']);
 if ($handle->uploaded) {
   $handle->image_convert = 'jpg', 'jpeg', 'png', 'gif';
-  $handle->process('/home/user/files/');
+  $handle->process('./images');
   if ($handle->processed) {
     echo 'image resized';
     $handle->clean();

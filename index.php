@@ -67,7 +67,6 @@
       </div>
      <label class="custom-file" id="customFile">
          <input type="file" size="32" name="image_field" value="">
-         <input type="submit" name="Submit" value="upload">
      </label>
     <div>
         <button type="submit" class="btn btn-light">Envoyer</button>
