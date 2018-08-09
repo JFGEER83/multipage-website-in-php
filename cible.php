@@ -22,7 +22,7 @@ if ($handle->uploaded) {
   }
 }
 //fin test code upload
-
+//ajout commentaire 
 /*use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;*/
 
