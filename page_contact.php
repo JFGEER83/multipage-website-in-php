@@ -8,7 +8,7 @@
 
  <div class="col-12 col-sm-6 my-sm-3">
 <h3 class="section-title-third">A CHAQUE QUESTION SA REPONSE</h3>
-<form action="cible2.php" method="post" enctype="multipart/form-data">
+<form action="cible.php" method="post" enctype="multipart/form-data">
     <div class="form-group form-inline">
        <label for="name" class="col-12 col-sm-4">Nom</label>
        <input type="text" id="name" name="name" class="form-control col-sm-8" placeholder="Nom de famille">
