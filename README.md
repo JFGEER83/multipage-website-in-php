@@ -32,9 +32,10 @@
  #### Liste d'objectif réalisé :
  
  * groupe : Agile (manipulation tableau kanban) + tenue quotidienne du planning du groupe
-   Nous avons décider d'utiliser un autre outil d'organistion style kanban qui se nomme Monday (évidement cet outil était en version d'essais, enfin c'est ce que j'ai hélas découvert une semaine plus tard...)
- ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/PXGj20x)
- ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/vqCOyN4)
+   Nous avons décider d'utiliser un autre outil d'organistion style kanban qui se nomme Monday 
+  (évidement cet outil était en  version d'essais, enfin c'est ce que j'ai hélas découvert une semaine plus tard...)  
+ ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/PXGj20x) . 
+ ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/vqCOyN4) . 
  * groupe : être le capitaine du repos, qui gère les merge et les conflits
  * groupe : rédaction d'un readme complet et professionnel 
  * backend : utilisation d'un serveur SMTP
