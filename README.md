@@ -35,9 +35,9 @@
    Nous avons décider d'utiliser un autre outil d'organistion style kanban qui se nomme Monday 
   (évidement cet outil était en  version d'essais, enfin c'est ce que j'ai hélas découvert une semaine plus tard...)    
   
- ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/PXGj20x) .
+ ![Exemple de notre kanban version Monday.com] (https://imgur.com/I30LazP) .
     
- ![Exemple de notre kanban version Monday.com] (https://imgur.com/a/vqCOyN4) . 
+ ![Exemple de notre kanban version Monday.com] (https://imgur.com/4NEI1hB) . 
    
  * groupe : être le capitaine du repos, qui gère les merge et les conflits
  * groupe : rédaction d'un readme complet et professionnel 
