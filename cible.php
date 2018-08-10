@@ -55,7 +55,7 @@ try {
     $mail->addAttachment($attachement);
     
     //body content
-    $body = "<p><strong>Bonjour</strong>, " . $name .", </p><p>Nous avons bien reçu votre demande concernant:</p>".$message."<p>Nous vous envoyons une réponse dans les plus brefs délais.</p><p>Bien cordialement</p><p>L'équipe ASSoc.be</p>";
+    $body = "<p><strong>Bonjour</strong>, " . $firstname .", </p><p>Nous avons bien reçu votre demande concernant:</p>".$message."<p>Nous vous envoyons une réponse dans les plus brefs délais.</p><p>Bien cordialement</p><p>L'équipe ASSoc.be</p>";
     
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
