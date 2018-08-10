@@ -37,7 +37,7 @@
                     </div>
                 <div id="banner-header"class="title-header">
                     <h2 id="message-main3"class="mt-3 col-10">N'hésitez plus!!!</h2>
-                    <button id="button-header">CONTACTEZ-NOUS</button>
+                    <button id="button-header"><a href="#section-contact">CONTACT US</a></button>
                 </div>
            
             </div>
@@ -67,7 +67,7 @@
                     <div id="button-sticky-doc"class="button-menu--round small">
                         <h2><a href="#section-doc">DOC</a></h2>
                     </div>
-                    <div id="button-sticky-infos"class="button-menu--round small">
+                    <div id="button-sticky-infos"class="button-menu--round small button-sticky-infos">
                         <h2><a href="#section-infos">INFOS</a></h2>
                     </div>
                     <div id="button-sticky-contact"class="button-menu--round small">
@@ -111,11 +111,7 @@
                         <div id="button-contact"class="button-menu--round">
                             <h2>CONTACT</h2>
                         </div>
-                        <div id="section-contact" class="container-fluid section d-flex">
-                           <div class="row">
-                              <?php include("page_contact.php");?> 
-                            </div>
-                        </div>
+                        
                         <form id="section-search" class="section">
                             <div class="search-bar">
                                 <input type="text" name = "search" autofocus placeholder="SEARCH">
@@ -125,11 +121,20 @@
         </div>
     </main>
     <footer>
-        <div class="box-footer-icons">
+        <div id="section-contact" class="container-fluid section d-flex">
+                <div class="row">
+                    <?php include("page_contact.php");?> 
+                    <div class="col-sm-6 box-footer-icons">
 
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i> 
+                    </div>
+                </div>
+               
+                   
+               
+               
         </div>
     </footer>       
 <script src="assets/js/script.js"></script>

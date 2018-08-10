@@ -36,7 +36,8 @@ time, mark, audio, video {
 }
 
 p {
-    margin-top: 1.5em;
+    margin: 1em;
+    font-size: 1em;
 }
 /* .absolute{
     position: absolute;
@@ -180,10 +181,7 @@ header {
     padding-left:1em;
     padding-right: 1em;
 }
-p {
-    font-size: 1.2em;
-    margin:1em;
-}
+
 .section-title-primary {
     font-size: 2em;
     text-align: center;
@@ -201,7 +199,7 @@ border-bottom: 5px solid rgba(255, 255, 255,0.8);
 border-radius: 0 0 30% 0;
 /* width: 70%;
 max-width: 200px; */
-margin: 2em auto 2em auto;
+margin: 4em auto 4em auto;
 }
 .section-title-third{
 text-align: center;
@@ -215,7 +213,7 @@ height:100px;
 width: 50vw;
 max-width: 250px;
 overflow: visible; 
-margin: 1em auto 1em auto;
+margin: 2em auto 2em auto;
 font-size: 1em;
 }
 .box-title{
@@ -261,6 +259,8 @@ font-size: 1em;
 
 /*FOOTER*/
 .box-footer-icons {
+    color: black;
+    background-color: transparent;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -293,7 +293,7 @@ ul .fa-square{
    /*  background-color: transparent; */
    background-color:transparent;
     color: black;
-    z-index:1000;
+    z-index:800;
     position: fixed;
     top: 140px;
     left:-100px;
@@ -383,11 +383,28 @@ ul .fa-square{
     align-items: center;
     color:rgba(246, 66, 66,0.8)
 }
-.form-control, .custom-select{
-    color: rgba(246, 66, 66,0.6);
-    
-    border : 3px solid rgba(246, 66, 66,0.6);
+
+#section-contact{
+    /* background-color: rgba(246, 66, 66,1); */
+    background-color: white; /*from color palet J-F*/
+    color:rgba(246, 66, 66,1);
 }
+label {
+    font-size: 1em;
+}
+
+
+
+.form-control, .custom-select, #customFile{
+    color: black;
+    
+    border : 2px solid rgba(246, 66, 66,0.8) ;
+}
+#customFile{
+    background-color:white;
+    width: 100%;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -395,4 +412,7 @@ a {
 a:hover {
     text-decoration: none;
     color: rgba(246, 66, 66,0.6);
+}
+form{
+    z-index:1000;
 }
