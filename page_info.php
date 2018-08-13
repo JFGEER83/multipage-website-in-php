@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 <div class= "col-12">
-<h2 id="ancre-asbl"class="section-title-primary">LES ASBL</h2>
+<h2 id="ancre-asbl"class="section-title-primary"><!-- <i class="fas fa-window-minimize"></i> -->LES ASBL</h2>
 </div>
 <div class="col-12 mx-auto">
     <div class="row">

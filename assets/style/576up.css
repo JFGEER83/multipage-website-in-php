@@ -139,7 +139,7 @@
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
-        width:60vw;
+        width:100vw;
         height: 20vh;
         margin: 0 auto;
         top: 10vh;
@@ -156,16 +156,16 @@
        /*  left:35vw;
         top: 20vh; */
         letter-spacing: 0.1em;
-        width: 40%;
-        margin: 1em 0 4em 0;
+        width: 20vw;
+        margin: 1em 20em 4em 0em;
         padding-top:3em;
-
         background-color: rgba(11, 11, 219, 0.5);
         
      }
      #title-main h1{
          position: relative;
          left:1em;
+         width: 20vw;
         padding-top:0.5em;
         padding-left: 0.5em;
         letter-spacing: 0.2em;
@@ -198,7 +198,7 @@
         text-align: center;
          background-color: rgba(255, 255, 255,1);
         color:black;
-        width: 100%;
+        width: 30vw;
         margin: 0 0 0 1em;
        
        /*  left:25vw;
@@ -213,7 +213,7 @@
         background-color: rgba(255, 255, 255,1);
         color:black;
         font-weight: 300;
-        width: 100%;
+        width: 40vw;
         margin: 0 0 0 1em;
        
       /*   background-color: rgba(11, 11, 219, 0.678); */
@@ -230,10 +230,10 @@
         width: 100vw;
         margin: 0 auto;
         padding: 0 5em;
-        height: 22vh;
+        height: 15vh;
         letter-spacing: 0.3em;
         left:0vw;
-        top: 68vh;
+        top: 75vh;
         flex-wrap: wrap;
    /*      background-color: rgba(246, 66, 66,1); */
    background-color: #E83424;

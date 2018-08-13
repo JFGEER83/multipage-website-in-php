@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/style.css">
@@ -59,7 +66,7 @@
     </div>
                 <div id="header-576up" class="header-576up">
                      <div id="button-sticky-home"class="button-menu--round small">
-                        <h2><a href="#title-main">HOME</a></h2>
+                        <h2><a href="#section-search">HOME</a></h2>
                     </div>
                     <div id="button-sticky-about"class="button-menu--round small">
                         <h2><a href="#section-about">About Us</a></h2>
@@ -168,6 +175,12 @@
 });
   
 </script>
-
+<script src="upup.min.js"></script>
+<script>
+  UpUp.start({
+    'content-url': 'index.php', // show this when the user is offline
+    'assets': ['offline.css']
+  });
+</script>
 </body>
 </html>
