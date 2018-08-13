@@ -178,7 +178,7 @@
 <script src="upup.min.js"></script>
 <script>
   UpUp.start({
-    'content-url': 'index.php', // show this when the user is offline
+    'content-url': 'offline.html', // show this when the user is offline
     'assets': ['offline.css']
   });
 </script>
