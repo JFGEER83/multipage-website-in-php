@@ -75,6 +75,8 @@ function showPersonnel(){
 let ancreAsbl = document.getElementById("asbl");
 let ancreFormalites = document.getElementById("ancre-formalites")
 /* let buttonFormalites= document.getElementById("button-formalites"); */
+/* let buttonHeader= document.getElementById("button-header");
+buttonHeader.addEventListener("click",) */
 let buttonMenu = document.getElementById("button-menu");
 let sectionAside = document.getElementById("section-aside");
 let buttonArrow =document.getElementById("button-menu-aside");
@@ -133,14 +135,23 @@ function myFunction() {
     let stickyInfos= sectionInfos.offsetTop;
     let stickyContact= sectionContact.offsetTop;
     let stickyButtonInfos= document.getElementById("button-sticky-infos");
+    let stickyButtonAbout= document.getElementById("button-sticky-about");
+    let stickyButtonDoc= document.getElementById("button-sticky-doc");
+    let stickyButtonContact= document.getElementById("button-sticky-contact");
   if(styleBody.width>='1001px'){ /*576*/
-    if (window.pageYOffset > stickyInfos+300 && window.pageYOffset < stickyContact+500 ){
+    if (window.pageYOffset > stickyInfos+800 && window.pageYOffset < stickyContact-500 ){
         sectionAside.classList.add("transition");
         stickyButtonInfos.classList.add("transition");
-
+   
     }else{
         sectionAside.classList.remove("transition");
         stickyButtonInfos.classList.remove("transition");
+        
+    }
+    if(window.pageYOffset > stickyContact-900){
+        stickyButtonContact.classList.add("transition");
+    }else{
+        stickyButtonContact.classList.remove("transition");
     }  
   }  
   
