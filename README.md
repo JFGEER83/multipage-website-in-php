@@ -88,12 +88,12 @@ J'ai adoré travailler avec mon Binôme Jean-François Geerinckx. Nous nous somm
 
 ## Résultat Lighthouse : 
  
- ![https://imgur.com/a/clOHayr](https://imgur.com/a/clOHayr)
+ [Imgur](https://i.imgur.com/ssfvIRv.png)
  
 ## A venir
 
 ## Screenshots 
 
-![https://imgur.com/a/Kj8XZSl](https://imgur.com/a/Kj8XZSl)
+[Imgur](https://i.imgur.com/RZHTk2D.png)
 
-![https://imgur.com/a/N4aKKKd](https://imgur.com/a/N4aKKKd)
+[Imgur](https://i.imgur.com/VW7nDCv.png)
